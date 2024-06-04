@@ -1,102 +1,103 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
-        <style>
-            body {
-                padding: 0;
-                margin: 0;
-                color: #666;
-                background: #fafafa;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 1em;
-                line-height: 1.4;
-            }
 
-            header {
-                display: block;
-                padding: 3em 3em 2em;
-                background-color: #fff;
-            }
+<head>
+    <meta charset="utf-8">
+    <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            color: #666;
+            background: #fafafa;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            line-height: 1.4;
+        }
 
-            header p {
-                margin: 2em 0 0;
-            }
+        header {
+            display: block;
+            padding: 3em 3em 2em;
+            background-color: #fff;
+        }
 
-            section {
-                border-top: 1px solid #eee;
-                padding: 2em 3em 0;
-            }
+        header p {
+            margin: 2em 0 0;
+        }
 
-            section ul {
-                margin: 0;
-                padding: 0;
-            }
+        section {
+            border-top: 1px solid #eee;
+            padding: 2em 3em 0;
+        }
 
-            section li {
-                display: inline-block;
-                background-color: #fff;
-                position: relative;
-                margin: 0 2em 2em 0;
-                vertical-align: top;
-                border: 1px solid #ccc;
-                padding: 1em 1em 3em;
-                cursor: default;
-            }
+        section ul {
+            margin: 0;
+            padding: 0;
+        }
 
-            .icon-box {
-                margin: 0;
-                width: 144px;
-                height: 144px;
-                position: relative;
-                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
-                border: 1px solid #ccc;
-                display: table-cell;
-                vertical-align: middle;
-                text-align: center;
-            }
+        section li {
+            display: inline-block;
+            background-color: #fff;
+            position: relative;
+            margin: 0 2em 2em 0;
+            vertical-align: top;
+            border: 1px solid #ccc;
+            padding: 1em 1em 3em;
+            cursor: default;
+        }
 
-            .icon {
-                display: inline-block;
-            }
+        .icon-box {
+            margin: 0;
+            width: 144px;
+            height: 144px;
+            position: relative;
+            background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+            border: 1px solid #ccc;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
 
-            h1 {
-                margin-top: 0;
-            }
+        .icon {
+            display: inline-block;
+        }
 
-            h2 {
-                margin: 0;
-                padding: 0;
-                font-size: 1em;
-                font-weight: 400;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                position: absolute;
-                left: 1em;
-                right: 1em;
-                bottom: 1em;
-            }
+        h1 {
+            margin-top: 0;
+        }
 
-            footer {
-                display: block;
-                margin: 0;
-                padding: 0 3em 3em;
-            }
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+            font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            left: 1em;
+            right: 1em;
+            bottom: 1em;
+        }
 
-            footer p {
-                margin: 0;
-                font-size: .7em;
-            }
+        footer {
+            display: block;
+            margin: 0;
+            padding: 0 3em 3em;
+        }
 
-            footer a {
-                color: #0f7595;
-                margin-left: 0;
-            }
-        </style>
+        footer p {
+            margin: 0;
+            font-size: .7em;
+        }
 
-<!--
+        footer a {
+            color: #0f7595;
+            margin-left: 0;
+        }
+    </style>
+
+    <!--
 Sprite shape dimensions
 ====================================================================================================
 You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
@@ -104,21 +105,32 @@ they would become a huge 100% in size. You may use the following dimension class
 They might well be outsourced to an external stylesheet of course.
 -->
 
-<style>
- .svg-svg-arrow-dims { width: 8.2966518px; height: 6.0058289px; }
- .svg-svg-bag-dims { width: 24px; height: 24px; }
- .svg-svg-dress-dims { width: 25px; height: 25px; }
- .svg-svg-phone-dims { width: 17px; height: 17px; }
-</style>
+    <style>
+        .svg-svg-arrow-dims {
+            width: 19px;
+            height: 11px;
+        }
 
-<!--
+        .svg-svg-logo-dims {
+            width: 41px;
+            height: 46px;
+        }
+
+        .svg-svg-question-dims {
+            width: 31px;
+            height: 31px;
+        }
+    </style>
+
+    <!--
 ====================================================================================================
 -->
 
-    </head>
-    <body>
+</head>
 
-<!--
+<body>
+
+    <!--
 Inline <symbol> SVG sprite
 ====================================================================================================
 This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
@@ -129,129 +141,152 @@ below within this document. Please see
 for further details on how to create this embeddable sprite variant.
 -->
 
-<svg width="0" height="0" style="position:absolute">
-     <symbol viewBox="0 0 8.2966518 6.0058289" id="svg-arrow" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><sodipodi:namedview id="anamedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"/><defs id="adefs2"/><g xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:label="Layer 1" inkscape:groupmode="layer" id="alayer1" transform="translate(-21.308932,-180.85423)"><g id="ag24" transform="matrix(0.26458333,0,0,0.26458333,21.308932,180.68214)"><path d="M 20.542969,0.65039062 19.830078,1.3496094 29.806641,11.5 H 0 v 1 h 29.806641 l -9.976563,10.150391 0.712891,0.699218 10.814453,-11 L 31,12 31.357422,11.650391 Z" id="apath191"/></g></g></symbol>
-     <symbol viewBox="0 0 24 24" id="svg-bag" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#bclip0_39253_218)"><path d="M23.8454 8.2243C23.7281 8.10906 23.5642 8.05442 23.4012 8.07624H17.0343V5.26295C17.0343 2.4826 14.7804 0.228699 12.0001 0.228699C9.21971 0.228699 6.96582 2.4826 6.96582 5.26295V8.07624H0.598861C0.421164 8.07624 0.243523 8.07624 0.154646 8.2243C0.0352739 8.33902 -0.0201042 8.5051 0.00659291 8.66851L2.22761 20.81C2.53789 22.5037 4.00034 23.7431 5.72199 23.7713H18.278C20.0046 23.7289 21.464 22.4797 21.7724 20.7804L23.9934 8.66851C24.0201 8.5051 23.9648 8.33902 23.8454 8.2243ZM8.1503 5.26295C8.1503 3.13682 9.87388 1.41324 12 1.41324C14.1261 1.41324 15.8497 3.13682 15.8497 5.26295V8.07624H8.1503V5.26295ZM20.5879 20.6323C20.3884 21.7547 19.4179 22.5759 18.278 22.5868H5.72199C4.58212 22.5759 3.61161 21.7547 3.41215 20.6323L1.30959 9.26078H22.6904L20.5879 20.6323Z"/><path d="M16.4421 15.0354C16.7692 15.0354 17.0343 14.7702 17.0343 14.4431V12.6663C17.0343 12.3392 16.7692 12.074 16.4421 12.074C16.1149 12.074 15.8498 12.3392 15.8498 12.6663V14.4431C15.8497 14.7702 16.1149 15.0354 16.4421 15.0354Z"/><path d="M7.55803 15.0354C7.88514 15.0354 8.1503 14.7702 8.1503 14.4431V12.6663C8.1503 12.3392 7.88514 12.074 7.55803 12.074C7.23092 12.074 6.96576 12.3392 6.96576 12.6663V14.4431C6.96576 14.7702 7.23092 15.0354 7.55803 15.0354Z"/></g><defs><clipPath id="bclip0_39253_218"><rect width="24" height="24"/></clipPath></defs></symbol>
-     <symbol viewBox="0 0 25 25" id="svg-dress" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#cclip0_39253_197)"><path d="M21.5169 22.6493L21.1587 20.9776C20.4207 17.5332 19.0683 14.2964 17.1387 11.3529V8.64058C18.0275 7.97178 18.6035 6.9084 18.6035 5.71289V4.24805C18.6035 3.84355 18.2756 3.51562 17.8711 3.51562H17.1387V0.732422C17.1387 0.32793 16.8107 0 16.4062 0C16.0018 0 15.6738 0.32793 15.6738 0.732422V3.52339C14.3584 3.6001 13.2059 4.29209 12.5 5.31528C11.7941 4.29209 10.6416 3.6001 9.32617 3.52339V0.732422C9.32617 0.32793 8.99824 0 8.59375 0C8.18926 0 7.86133 0.32793 7.86133 0.732422V3.51562H7.1289C6.72441 3.51562 6.39648 3.84355 6.39648 4.24805V5.71289C6.39648 6.9084 6.97246 7.97178 7.86133 8.64058V11.3529C5.93174 14.2964 4.57934 17.5332 3.84126 20.9776L3.48305 22.6493C3.40649 23.0066 3.60507 23.3658 3.94853 23.4909C6.69741 24.4923 9.57451 25 12.5 25C15.4255 25 18.3026 24.4923 21.0515 23.4909C21.3949 23.3658 21.5935 23.0067 21.5169 22.6493ZM15.918 4.98047H17.1387V5.71289C17.1387 6.92446 16.153 7.91016 14.9414 7.91016H13.2324V7.66602C13.2324 6.1852 14.4372 4.98047 15.918 4.98047ZM7.86133 4.98047H9.08203C10.5628 4.98047 11.7676 6.1852 11.7676 7.66602V7.91016H10.0586C8.84702 7.91016 7.86133 6.92446 7.86133 5.71289V4.98047ZM10.0586 9.375H14.9414C15.1922 9.375 15.4371 9.34956 15.6738 9.30132V10.8398H9.32617V9.30132C9.56289 9.34956 9.80781 9.375 10.0586 9.375ZM12.5 23.5352C9.95849 23.5352 7.45561 23.128 5.05073 22.3244L5.27353 21.2846C5.96118 18.0757 7.21054 15.0566 8.98901 12.3047L16.0109 12.3047C17.7894 15.0566 19.0388 18.0757 19.7264 21.2845L19.9492 22.3244C17.5444 23.128 15.0415 23.5352 12.5 23.5352Z"/></g><defs><clipPath id="cclip0_39253_197"><rect width="25" height="25"/></clipPath></defs></symbol>
-     <symbol viewBox="0 0 17 17" id="svg-phone" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#dclip0_39253_207)"><path d="M2.25241 4.81643C0.750584 6.31823 0.750584 8.7618 2.25238 10.2636L3.05007 9.46592C1.98816 8.40402 1.98814 6.67613 3.0501 5.61417C4.11203 4.55224 5.83992 4.55224 6.90185 5.61414L7.69953 4.81646C6.19776 3.31463 3.75418 3.31466 2.25241 4.81643Z"/><path d="M3.84127 6.39119C3.2091 7.02336 3.20907 8.05201 3.84124 8.68421L4.63895 7.88653C4.54578 7.79335 4.49446 7.66947 4.49446 7.53772C4.49446 7.40599 4.54581 7.2821 4.63898 7.18893C4.73215 7.09576 4.85603 7.04444 4.98776 7.04444C5.11952 7.04444 5.24343 7.09576 5.33658 7.18893L6.13426 6.39122C5.50209 5.75902 4.47344 5.75902 3.84127 6.39119Z"/><path d="M13.7483 4.43513L11.8551 2.54848L7.92337 6.47367L9.44758 8.04781C9.19214 8.50125 8.6379 9.3699 7.69334 10.3145C6.74865 11.2592 5.87366 11.8197 5.41587 12.0792L3.87261 10.5556L0.0022583 14.4029L1.8851 16.2983C2.60485 17.0181 3.69998 17.2046 4.6102 16.7625C5.99921 16.0879 8.09546 14.8431 10.1943 12.7443C12.2931 10.6455 13.5379 8.54924 14.2125 7.16023C14.3723 6.83109 14.45 6.47787 14.45 6.12692C14.45 5.5072 14.2078 4.89464 13.7483 4.43513ZM13.1977 6.66732C12.5609 7.97846 11.3845 9.95865 9.39661 11.9466C7.40868 13.9345 5.42849 15.1109 4.11735 15.7477C3.63935 15.9799 3.06287 15.8806 2.6842 15.5019L1.59746 14.4079L3.87543 12.1436L5.19015 13.4415L5.5419 13.2849C5.59905 13.2595 6.95947 12.6438 8.49116 11.1121C10.0239 9.57947 10.6267 8.23054 10.6515 8.17386L10.8041 7.82683L9.50677 6.48705L11.8559 4.14178L12.9512 5.23327C13.3307 5.6133 13.4298 6.18952 13.1977 6.66732Z"/></g><defs><clipPath id="dclip0_39253_207"><rect width="17" height="17"/></clipPath></defs></symbol>
-</svg>
+    <svg width="0" height="0" style="position:absolute">
+        <symbol viewBox="0 0 19 11" id="svg-arrow" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 0.999999L9.5 9L1.5 0.999999" stroke-width="1.5" stroke-linecap="round" />
+        </symbol>
+        <symbol viewBox="0 0 41 46" id="svg-logo" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M40.956 26.5H32.3692C31.3071 28.8083 29.3713 30.6077 27 31.4512C28.9936 32.2539 32.7898 33.5222 36.7079 34.5C38.8131 32.2593 40.2936 29.4998 41 26.5H40.956Z" />
+            <path
+                d="M23.393 32.1349C20.6803 30.5511 18.1948 28.6424 16.5617 26.5C16.4822 26.9445 16.4144 27.4122 16.3558 27.8956C16.3548 27.9034 16.3539 27.9123 16.353 27.9201C16.1117 29.9282 15.9076 33.9872 16.0436 38.0975C16.1205 40.424 16.306 42.7666 16.6563 44.7623C17.1384 45.0111 18.0856 45.5 18.0856 45.5L22.3605 39.9488C22.6312 39.9771 22.904 39.9982 23.1782 40.0147C23.1881 40.0153 23.1979 40.0163 23.2078 40.0169C23.3502 40.0264 23.4926 40.0298 23.635 40.0361C23.858 40.044 24.0809 40.0524 24.3059 40.0524C24.3108 40.0524 24.3158 40.0521 24.3207 40.0521C28.1566 40.0809 31.9004 38.9208 35 36.743C34.9573 36.7344 34.9118 36.724 34.8685 36.7149C31.8788 36.094 27.3902 34.4686 23.393 32.1349Z" />
+            <path
+                d="M18 17.5C17.6094 17.5514 17.2026 17.618 16.788 17.6926C16.7197 17.7049 16.6533 17.7153 16.5846 17.7281C14.6011 18.0978 10.6706 19.1025 6.76112 20.4323C4.46646 21.2128 2.17901 22.1051 0.296762 23.0473C0.19667 23.5645 0 24.5808 0 24.5808L6.64663 26.8487C6.64663 26.8487 6.64961 26.8462 6.652 26.8443C7.47445 31.1124 9.90819 34.9181 13.4662 37.5C13.4618 37.4562 13.4584 37.4092 13.4543 37.3646C13.165 34.2639 13.474 29.2918 14.7307 24.7106C15.4695 22.0172 16.5346 19.4596 18 17.5Z" />
+            <path
+                d="M19.943 14.8604C22.8091 14.7583 25.6389 15.0103 28 15.8268C27.8334 15.4672 27.647 15.0967 27.4505 14.7211C27.4181 14.6593 27.3882 14.5987 27.3551 14.5365C26.4023 12.7434 24.2468 9.27216 21.778 5.919C20.329 3.9509 18.7723 2.0234 17.287 0.5C16.749 0.55976 15.692 0.677128 15.692 0.677128L15.4391 7.74251C15.4391 7.74251 15.4424 7.74462 15.4451 7.74631C11.4956 9.8221 8.4794 13.3057 7 17.5C7.0417 17.4826 7.08693 17.4652 7.12947 17.4478C10.0904 16.2357 15.0679 15.0342 19.943 14.8604Z" />
+            <path
+                d="M31.0211 15.2119C31.4747 16.2474 31.8744 17.3048 32.2184 18.3801C32.2311 18.4201 32.2439 18.46 32.2563 18.5H41C40.8349 17.8567 40.6317 17.2235 40.3915 16.6033C40.3293 16.4424 40.2656 16.2823 40.1987 16.1237C37.6869 10.1709 31.8757 5.89934 25 5.5C26.8416 7.55628 29.1922 11.0923 30.9125 14.9657C30.949 15.0477 30.9851 15.1298 31.0211 15.2119Z" />
+        </symbol>
+        <symbol viewBox="0 0 31 31" id="svg-question" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#cfilter0_d_2_1418)">
+                <path
+                    d="M15.615 18.1988C15.9217 18.1988 16.1804 18.0933 16.3912 17.8825C16.6021 17.6717 16.7075 17.4129 16.7075 17.1062C16.7075 16.7996 16.6021 16.5408 16.3912 16.33C16.1804 16.1192 15.9217 16.0138 15.615 16.0138C15.3083 16.0138 15.0496 16.1192 14.8387 16.33C14.6279 16.5408 14.5225 16.7996 14.5225 17.1062C14.5225 17.4129 14.6279 17.6717 14.8387 17.8825C15.0496 18.0933 15.3083 18.1988 15.615 18.1988ZM14.6088 14.0013H16.305C16.305 13.5029 16.3673 13.0477 16.4919 12.6356C16.6165 12.2235 17.0046 11.7492 17.6562 11.2125C18.2504 10.7142 18.6721 10.2254 18.9213 9.74625C19.1704 9.26708 19.295 8.74 19.295 8.165C19.295 7.14917 18.9644 6.33458 18.3031 5.72125C17.6419 5.10792 16.765 4.80125 15.6725 4.80125C14.7333 4.80125 13.9044 5.03604 13.1856 5.50562C12.4669 5.97521 11.9446 6.62208 11.6187 7.44625L13.1425 8.02125C13.3533 7.48458 13.6696 7.06771 14.0912 6.77062C14.5129 6.47354 15.0112 6.325 15.5862 6.325C16.2379 6.325 16.765 6.50229 17.1675 6.85687C17.57 7.21146 17.7712 7.66667 17.7712 8.2225C17.7712 8.64417 17.6467 9.04187 17.3975 9.41562C17.1483 9.78937 16.7842 10.1775 16.305 10.58C15.73 11.0783 15.3035 11.5719 15.0256 12.0606C14.7477 12.5494 14.6088 13.1962 14.6088 14.0013ZM15.5 23C13.9283 23 12.4429 22.6981 11.0437 22.0944C9.64458 21.4906 8.42271 20.6665 7.37812 19.6219C6.33354 18.5773 5.50937 17.3554 4.90562 15.9562C4.30187 14.5571 4 13.0717 4 11.5C4 9.90917 4.30187 8.41417 4.90562 7.015C5.50937 5.61583 6.33354 4.39875 7.37812 3.36375C8.42271 2.32875 9.64458 1.50937 11.0437 0.905625C12.4429 0.301875 13.9283 0 15.5 0C17.0908 0 18.5858 0.301875 19.985 0.905625C21.3842 1.50937 22.6012 2.32875 23.6362 3.36375C24.6713 4.39875 25.4906 5.61583 26.0944 7.015C26.6981 8.41417 27 9.90917 27 11.5C27 13.0717 26.6981 14.5571 26.0944 15.9562C25.4906 17.3554 24.6713 18.5773 23.6362 19.6219C22.6012 20.6665 21.3842 21.4906 19.985 22.0944C18.5858 22.6981 17.0908 23 15.5 23ZM15.5 21.275C18.2217 21.275 20.5312 20.3215 22.4287 18.4144C24.3262 16.5073 25.275 14.2025 25.275 11.5C25.275 8.77833 24.3262 6.46875 22.4287 4.57125C20.5312 2.67375 18.2217 1.725 15.5 1.725C12.7975 1.725 10.4927 2.67375 8.58563 4.57125C6.67854 6.46875 5.725 8.77833 5.725 11.5C5.725 14.2025 6.67854 16.5073 8.58563 18.4144C10.4927 20.3215 12.7975 21.275 15.5 21.275Z"
+                    fill-opacity="0.75" shape-rendering="crispEdges" />
+            </g>
+            <defs>
+                <filter id="cfilter0_d_2_1418" x="0" y="0" width="31" height="31" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_1418" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_1418" result="shape" />
+                </filter>
+            </defs>
+        </symbol>
+    </svg>
 
-<!--
+    <!--
 ====================================================================================================
 -->
 
-        <header>
-            <h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
-            <p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
-            <ul>
-                <li>Your browser has to <a href="https://caniuse.com/svg-html5" target="_blank" rel="noopener noreferrer">support inline SVG</a> for these techniques to work.</li>
-                <li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode" target="_blank" rel="noopener noreferrer">see the documentation</a> for details on how to create such an embeddable sprite.</li>
-            </ul>
-        </header>
-        <section>
+    <header>
+        <h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+        <p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a
+            look at the HTML source for further details and be aware of the following constraints:</p>
+        <ul>
+            <li>Your browser has to <a href="https://caniuse.com/svg-html5" target="_blank"
+                    rel="noopener noreferrer">support inline SVG</a> for these techniques to work.</li>
+            <li>The embedded sprite (A) slightly differs from the generated external one. Please <a
+                    href="https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode"
+                    target="_blank" rel="noopener noreferrer">see the documentation</a> for details on how to create
+                such an embeddable sprite.</li>
+        </ul>
+    </header>
+    <section>
 
-<!--
+        <!--
 A) Inline SVG with embedded sprite
 ====================================================================================================
 These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
 embedded above. They may be styled via CSS.
 -->
 
-            <h3>A) Inline SVG with embedded sprite</h3>
-            <ul>
+        <h3>A) Inline SVG with embedded sprite</h3>
+        <ul>
 
-             <li title="svg-arrow">
-                    <div class="icon-box">
-                        <svg class="svg-svg-arrow-dims">
-                            <use xlink:href="#svg-arrow"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-arrow, </h2>
-                </li>
-             <li title="svg-bag">
-                    <div class="icon-box">
-                        <svg class="svg-svg-bag-dims">
-                            <use xlink:href="#svg-bag"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-bag, </h2>
-                </li>
-             <li title="svg-dress">
-                    <div class="icon-box">
-                        <svg class="svg-svg-dress-dims">
-                            <use xlink:href="#svg-dress"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-dress, </h2>
-                </li>
-             <li title="svg-phone">
-                    <div class="icon-box">
-                        <svg class="svg-svg-phone-dims">
-                            <use xlink:href="#svg-phone"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-phone, </h2>
-                </li>
-         </ul>
+            <li title="svg-arrow">
+                <div class="icon-box">
+                    <svg class="svg-svg-arrow-dims">
+                        <use xlink:href="#svg-arrow"></use>
+                    </svg>
+                </div>
+                <h2>svg-arrow, </h2>
+            </li>
+            <li title="svg-logo">
+                <div class="icon-box">
+                    <svg class="svg-svg-logo-dims">
+                        <use xlink:href="#svg-logo"></use>
+                    </svg>
+                </div>
+                <h2>svg-logo, </h2>
+            </li>
+            <li title="svg-question">
+                <div class="icon-box">
+                    <svg class="svg-svg-question-dims">
+                        <use xlink:href="#svg-question"></use>
+                    </svg>
+                </div>
+                <h2>svg-question, </h2>
+            </li>
+        </ul>
 
-<!--
+        <!--
 ====================================================================================================
 -->
 
-        </section>
-        <section>
+    </section>
+    <section>
 
-<!--
+        <!--
 B) Inline SVG with external sprite
 ====================================================================================================
 These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
 SVG sprite. They may be styled via CSS.
 -->
 
-            <h3>B) Inline SVG with external sprite</h3>
-            <ul>
+        <h3>B) Inline SVG with external sprite</h3>
+        <ul>
 
-             <li title="svg-arrow">
-                    <div class="icon-box">
-                        <svg class="svg-svg-arrow-dims">
-                            <use xlink:href="../img/icons/icons.svg#svg-arrow"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-arrow</h2>
-                </li>
-             <li title="svg-bag">
-                    <div class="icon-box">
-                        <svg class="svg-svg-bag-dims">
-                            <use xlink:href="../img/icons/icons.svg#svg-bag"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-bag</h2>
-                </li>
-             <li title="svg-dress">
-                    <div class="icon-box">
-                        <svg class="svg-svg-dress-dims">
-                            <use xlink:href="../img/icons/icons.svg#svg-dress"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-dress</h2>
-                </li>
-             <li title="svg-phone">
-                    <div class="icon-box">
-                        <svg class="svg-svg-phone-dims">
-                            <use xlink:href="../img/icons/icons.svg#svg-phone"></use>
-                        </svg>
-                    </div>
-                    <h2>svg-phone</h2>
-                </li>
-         </ul>
+            <li title="svg-arrow">
+                <div class="icon-box">
+                    <svg class="svg-svg-arrow-dims">
+                        <use xlink:href="../img/icons/icons.svg#svg-arrow"></use>
+                    </svg>
+                </div>
+                <h2>svg-arrow</h2>
+            </li>
+            <li title="svg-logo">
+                <div class="icon-box">
+                    <svg class="svg-svg-logo-dims">
+                        <use xlink:href="../img/icons/icons.svg#svg-logo"></use>
+                    </svg>
+                </div>
+                <h2>svg-logo</h2>
+            </li>
+            <li title="svg-question">
+                <div class="icon-box">
+                    <svg class="svg-svg-question-dims">
+                        <use xlink:href="../img/icons/icons.svg#svg-question"></use>
+                    </svg>
+                </div>
+                <h2>svg-question</h2>
+            </li>
+        </ul>
 
-<!--
+        <!--
 ====================================================================================================
 -->
 
-        </section>
-        <footer>
-            <p>Generated at Mon, 04 Mar 2024 13:25:57 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
-        </footer>
-    </body>
+    </section>
+    <footer>
+        <p>Generated at Tue, 04 Jun 2024 13:48:02 GMT by <a href="https://github.com/svg-sprite/svg-sprite"
+                target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+    </footer>
+</body>
+
 </html>

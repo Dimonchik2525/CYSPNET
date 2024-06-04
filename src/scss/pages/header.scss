@@ -1,8 +1,37 @@
 //====================================================================================================
+.header {
+   background-color: #272937;
+
+   &__container {}
+
+   &__menu {}
+
+   .menu {
+      &__body {}
+
+      &__logo {
+         &__img {}
+
+         &__text {}
+      }
+
+      &__list {}
+
+      &__item {}
+
+      &__link {}
+
+      &__access {
+         &__login {}
+
+         &__registration {}
+      }
+   }
+}
 
 //Burger
 
-/*.icon-menu {
+.icon-menu {
 
    display: none;
 
@@ -57,4 +86,4 @@
          }
       }
    }
-}*/
+}

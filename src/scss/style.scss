@@ -9,6 +9,14 @@
 //&display=swap - добавить при подключении через плагин
 //@import url("https://fonts.googleapis.com/css?family=Montserrat:300,regular,italic&display=swap");
 //@import url("https://fonts.googleapis.com/css?family=Italiana:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Teko:300,regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500&display=swap");
+
+:root {
+   --second-family: "Teko", sans-serif;
+   --third-family: "Roboto", sans-serif;
+}
 
 // Подключить если есть локальные файлы шрифтов
 //@import "fonts/fonts.scss";
@@ -18,11 +26,11 @@
 //@import "fonts/icons";
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
-$fontFamily: "";
-$fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
+$fontFamily: "Raleway";
+$fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
-$mainColor: #000; // Цвет шрифта по умолчанию
+$mainColor: #fff; // Цвет шрифта по умолчанию
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -30,7 +38,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1345;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -150,7 +158,7 @@ body {
 
 // Подключение стилей отдельных блоков
 //@import "@scss/pages/footer";
-//@import "@scss/pages/header";
+@import "@scss/pages/header";
 
 // Подключение стилей отдельных страниц
 //@import "home";
