@@ -2,8 +2,8 @@
 
 export const Button = (props) => {
    return (
-      <div className="button">
-         <button className={`${props.class} button`}>{props.children}</button>
+      <div className={`${props.class} button`}>
+         <button>{props.children}</button>
       </div>
    );
 }
