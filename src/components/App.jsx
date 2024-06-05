@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Header from "./Header/Header"
+import Main from "./Main/Main"
 
 export const App = () => {
    let [size, setSize] = useState(document.documentElement.clientWidth)
@@ -16,6 +17,7 @@ export const App = () => {
    return (
       <div className="wrapper">
          <Header size={size} />
+         <Main />
       </div>
    )
 }

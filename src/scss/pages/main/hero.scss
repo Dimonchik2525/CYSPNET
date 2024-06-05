@@ -1,0 +1,29 @@
+.hero {
+   &__container {}
+
+   &__block {}
+
+   &__content {
+      &__title {}
+
+      &__subtitle {}
+
+      &__list {}
+
+      &__item {}
+
+      &__actions {
+         &__join {
+            button {}
+         }
+
+         &__about {
+            button {}
+         }
+      }
+   }
+
+   &__img {
+      img {}
+   }
+}
