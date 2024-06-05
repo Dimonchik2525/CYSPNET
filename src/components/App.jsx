@@ -17,7 +17,7 @@ export const App = () => {
    return (
       <div className="wrapper">
          <Header size={size} />
-         <Main />
+         <Main size={size} />
       </div>
    )
 }

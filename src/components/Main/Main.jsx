@@ -1,9 +1,9 @@
 import Hero from "./Hero/Hero";
 
-export const Main = () => {
+export const Main = (props) => {
    return (
       <div>
-         <Hero />
+         <Hero size={props.size} />
       </div>
    );
 }

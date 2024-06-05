@@ -1,21 +1,21 @@
 import Button from "../../Common/Button";
 import Tooltip from "../../Common/Tooltip";
 
-export const Hero = () => {
+export const Hero = (props) => {
    return (
       <div className="hero">
          <div className="hero__container">
             <div className="hero__block">
                <div className="hero__content">
                   <h3 className="hero__content__title">Cyber Sport Network</h3>
-                  <h2 className="hero__content__subtitle">Играй, развивайся и выигрывай вместе с нами</h2>
+                  <h2 className="hero__content__subtitle">Играй, развивайся и выигрывай вместе с нами</h2>
                   <ul className="hero__content__list">
-                     <li className="hero__content__item">Ежедневные турниры</li>
-                     <li className="hero__content__item">Денежные призы</li>
-                     <li className="hero__content__item">Свой подход к читерству</li>
-                     <li className="hero__content__item">Уникальная рейтинговая система</li>
-                     <li className="hero__content__item">Развитие в любой отрасли киберспорта</li>
-                     <li className="hero__content__item">Интересный матчмейкинг</li>
+                     <li className="hero__content__item"><span>Ежедневные турниры</span></li>
+                     <li className="hero__content__item"><span>Денежные призы</span></li>
+                     <li className="hero__content__item"><span>Свой подход к читерству</span></li>
+                     <li className="hero__content__item"><span>Уникальная рейтинговая система</span></li>
+                     <li className="hero__content__item"><span>Развитие в любой отрасли киберспорта</span></li>
+                     <li className="hero__content__item"><span>Интересный матчмейкинг</span></li>
                   </ul>
                   <div className="hero__content__actions">
                      <Button class={'hero__content__actions__join'}>Присоединиться</Button>
@@ -25,11 +25,11 @@ export const Hero = () => {
                   </div>
                </div>
                <div className="hero__img">
-                  <img src="img/hero/hero__img.png" alt=""></img>
+                  <img src={props.size > 700 ? "img/hero/hero__img.png" : "img/hero/hero__img__2.png"} alt=""></img>
                </div>
             </div>
          </div>
-         <Tooltip />
+         {props.size > 960 ? <Tooltip /> : ''}
       </div>
    );
 }

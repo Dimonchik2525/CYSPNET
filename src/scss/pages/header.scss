@@ -29,6 +29,7 @@
             overflow: auto;
             transition: all 0.8s ease 0s;
             padding-bottom: rem(25);
+            z-index: 10;
          }
 
          .menu-open & {
@@ -174,7 +175,7 @@
       width: rem(30);
       height: rem(18);
       cursor: pointer;
-      z-index: 5;
+      z-index: 10;
 
       span,
       &::before,

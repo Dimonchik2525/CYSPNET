@@ -1,5 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+//!! BUTON ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 .button {
    height: rem(69);
    box-shadow: 0 rem(4) rem(25) 0 rgba(240, 68, 81, 0.25);
@@ -25,6 +27,8 @@
    }
 }
 
+//!! SVG ICONS =-===============================================================
+
 .svg-svg-arrow-dims {
    fill: transparent;
    stroke-width: 1.50px;
@@ -42,4 +46,64 @@
    }
 
    fill: rgba(255, 255, 255, 0.75);
+}
+
+//!! TOOLTIP===============================================================
+
+.tooltip {
+   opacity: 0.5;
+   display: flex;
+   padding: rem(30) 0;
+   align-items: center;
+
+   &__scroll {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(5);
+      align-items: center;
+      align-content: center;
+
+      &__text {}
+
+      &__arrow {
+         svg {
+            stroke-width: 1.50px;
+            stroke: #fff;
+            width: rem(19);
+            height: rem(11);
+         }
+      }
+   }
+
+   &__beta__wrapper {
+      display: flex;
+      justify-content: center;
+      width: rem(202);
+      height: rem(66);
+      @include adaptiveValue("padding-right", 31, 7, 1350, 960, 1);
+   }
+
+   &__beta {
+      display: flex;
+      column-gap: rem(10);
+      align-items: center;
+      justify-content: center;
+
+      &__text {
+         font-size: 16px;
+         line-height: 160%;
+      }
+
+      &__img {
+         margin-top: rem(10);
+
+         svg {
+            fill: rgba(255, 255, 255, 0.75);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            width: rem(31);
+            height: rem(31);
+         }
+      }
+   }
 }
