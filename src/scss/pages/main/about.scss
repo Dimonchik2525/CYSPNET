@@ -1,0 +1,19 @@
+.about {
+   &__container {}
+
+   &__block {}
+
+   &__img {
+      img {}
+   }
+
+   &__content {
+      &__title {}
+
+      &__text {}
+
+      &__button {
+         button {}
+      }
+   }
+}
