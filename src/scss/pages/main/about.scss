@@ -1,19 +1,89 @@
 .about {
+   background: url('img/about/about__bg.png') 0 0 /cover no-repeat;
+   background-color: #222432;
+   position: relative;
+   z-index: 3;
+
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: auto/auto 31.59%;
+      align-items: center;
+      @include adaptiveValue("padding-top", 52, 47);
+      @include adaptiveValue("padding-bottom", 194, 50, 960, 640, 0);
+      @include adaptiveValue("padding-bottom", 48, 48, 640, 360, 1);
+
+      @media (max-width: 960px) and (min-width: 640px) {
+         grid-template: auto/auto 39.59%;
+
+      }
+
+      @media (max-width:640px) {
+         display: flex;
+         flex-direction: column-reverse;
+      }
+
+   }
 
    &__img {
-      img {}
+      @include adaptiveValue("margin-top", -25, 60, 640, 360, 1);
+      position: relative;
+      z-index: 3;
+      @include adaptiveValue("margin-left", -246, -50, 1350, 960, 0);
+
+
+      &__main {
+         position: relative;
+         z-index: 2;
+         max-width: 100%;
+      }
+
+      &__patern {
+         border-radius: 50%;
+         max-width: 85%;
+         max-height: 85%;
+         position: absolute;
+         top: 7%;
+         right: 7%;
+         z-index: 0;
+         max-width: 100%;
+      }
    }
 
    &__content {
-      &__title {}
+      position: relative;
+      z-index: 3;
 
-      &__text {}
+      &__title {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 46, 24);
+         line-height: 150%;
+
+         &:not(:last-child) {
+            padding-bottom: rem(15);
+         }
+      }
+
+      &__text {
+         opacity: 0.75;
+         @include adaptiveValue("font-size", 18, 14);
+         line-height: 140%;
+
+         &:not(:last-child) {
+            padding-bottom: rem(35);
+         }
+      }
 
       &__button {
-         button {}
+         height: rem(69);
+         @include adaptiveValue("width", 154, 145);
+
+         button {
+            line-height: 160%;
+            letter-spacing: 0.04em;
+            @include adaptiveValue("font-size", 18, 16);
+         }
       }
    }
 }

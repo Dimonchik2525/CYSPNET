@@ -7,7 +7,8 @@ export const About = (props) => {
          <div className="about__container">
             <div className="about__block">
                <div className="about__img">
-                  <img src="img/about/about__img.png" alt="" />
+                  <img className="about__img__main" src="img/about/about__img.png" alt="" />
+                  <img className="about__img__patern" src="img/about/about__patern.png" alt="" />
                </div>
                <div className="about__content">
                   <div className="about__content__title">О платформе</div>
