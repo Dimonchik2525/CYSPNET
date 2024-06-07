@@ -57,6 +57,7 @@
    align-items: center;
 
    &__scroll {
+      cursor: pointer;
       flex: 1 1 auto;
       display: flex;
       flex-direction: column;
@@ -64,9 +65,14 @@
       align-items: center;
       align-content: center;
 
-      &__text {}
+      &__text {
+         animation: scrollText 2s infinite;
+      }
 
       &__arrow {
+         margin-top: 10px; // Adjust as needed
+         animation: pulseArrow 1s infinite;
+
          svg {
             stroke-width: 1.50px;
             stroke: #fff;
@@ -105,5 +111,33 @@
             height: rem(31);
          }
       }
+   }
+}
+
+@keyframes scrollText {
+   0% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-10px);
+   }
+
+   100% {
+      transform: translateY(0);
+   }
+}
+
+@keyframes pulseArrow {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
    }
 }
