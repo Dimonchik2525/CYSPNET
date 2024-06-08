@@ -1,0 +1,17 @@
+.advantages {
+   background: red;
+
+   &__container {}
+
+   &__block {}
+
+   &__item {
+      &__img {
+         svg {}
+      }
+
+      &__title {}
+
+      &__text {}
+   }
+}

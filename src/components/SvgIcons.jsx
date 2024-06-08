@@ -7,4 +7,8 @@ export { SvgCulcIcon, SvgMailIcon, SvgPhoneIcon, SvgPhoneIcon2 };*/
 const SvgArrowIcon = () => <svg className="svg-svg-arrow-dims"><use xlinkHref="img/icons/icons.svg#svg-arrow" /></svg>;
 const SvgLogoIcon = () => <svg className="svg-svg-logo-dims"><use xlinkHref="img/icons/icons.svg#svg-logo" /></svg>;
 const SvgQuestionIcon = () => <svg className="svg-svg-question-dims"><use xlinkHref="img/icons/icons.svg#svg-question" /></svg>;
-export { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon };
+const SvgMicroIcon = () => <svg className="svg-svg-micro-dims"><use xlinkHref="img/icons/icons.svg#svg-micro" /></svg>;
+const SvgMoneyIcon = () => <svg className="svg-svg-money-dims"><use xlinkHref="img/icons/icons.svg#svg-money" /></svg>;
+const SvgRewardIcon = () => <svg className="svg-svg-question-dims"><use xlinkHref="img/icons/icons.svg#svg-question" /></svg>;
+const SvgLightIcon = () => <svg className="svg-svg-reward-dims"><use xlinkHref="img/icons/icons.svg#svg-reward" /></svg>;
+export { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon };

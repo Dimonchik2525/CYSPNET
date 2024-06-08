@@ -1,4 +1,5 @@
 import About from "./About/About";
+import Advantages from "./Advantages/Advantages";
 import Hero from "./Hero/Hero";
 
 export const Main = (props) => {
@@ -6,6 +7,7 @@ export const Main = (props) => {
       <div>
          <Hero size={props.size} />
          <About size={props.size} />
+         <Advantages size={props.size} />
       </div>
    );
 }
