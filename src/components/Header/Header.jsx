@@ -19,7 +19,7 @@ export const Header = (props) => {
    </div>
 
    return (
-      <div className="header">
+      <header data-scroll="112" className="header">
          <div className="header__container">
             <div className="header__block">
                <div className="menu__logo">
@@ -28,7 +28,10 @@ export const Header = (props) => {
                   </a>
                   <a href="" className="menu__logo__text">CYSPNET</a>
                </div>
-               <div onClick={() => document.documentElement.classList.toggle('menu-open')} className="header__menu menu">
+               <div onClick={() => {
+                  document.documentElement.classList.toggle('menu-open')
+                  document.documentElement.classList.toggle('lock')
+               }} className="header__menu menu">
                   <nav onClick={(e) => e.stopPropagation()} className="menu__body">
                      <ul className="menu__list">
                         <li className="menu__item"><a href="" className="menu__link">Главная</a></li>
@@ -46,7 +49,7 @@ export const Header = (props) => {
                <button type="button" className="menu__icon icon-menu"><span></span></button>
             </div>
          </div>
-      </div>
+      </header>
    );
 }
 

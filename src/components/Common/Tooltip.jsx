@@ -9,7 +9,7 @@ export const Tooltip = () => {
                <SvgArrowIcon />
             </div>
          </div>
-         <div className="tooltip__beta__wrapper">
+         <div id="data-tippy-content" className="tooltip__beta__wrapper">
             <a href="#" className="tooltip__beta">
                <div className="tooltip__beta__text">Бета-версия</div>
                <div className="tooltip__beta__img">

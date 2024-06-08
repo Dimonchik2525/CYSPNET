@@ -1,17 +1,113 @@
 .advantages {
-   background: red;
+   background: url('img/advantages/advantages__bg.png') 0 0 /cover no-repeat;
+   background-color: #1d1f2d;
 
    &__container {}
 
-   &__block {}
+   &__block {
+      @include adaptiveValue("padding-top", 114, 40);
+   }
 
-   &__item {
-      &__img {
-         svg {}
+   &__img {
+      @media (max-width:960px) {
+         display: none;
       }
 
-      &__title {}
+      img {
+         max-width: 100%;
+      }
+   }
 
-      &__text {}
+   &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 46, 24);
+      line-height: 150%;
+
+      &:not(:last-child) {
+         @include adaptiveValue("padding-bottom", 50, 25);
+      }
+   }
+
+   &__content {
+      display: grid;
+      grid-template: auto auto/repeat(4, 1fr);
+      @include adaptiveValue("padding-bottom", 143, 23);
+      row-gap: rem(39);
+      column-gap: rem(15);
+
+
+      @media (min-width:960px) {
+         :nth-child(5) {
+            @include adaptiveValue("margin-left", -104, 0, 1345, 960, 1);
+            margin-left: rem(-104);
+            align-self: center;
+         }
+
+         :nth-child(2),
+         :nth-child(4) {
+            align-self: end;
+         }
+
+         :last-child {
+            justify-self: end;
+         }
+      }
+
+      @media (max-width:960px) and (min-width:640px) {
+         grid-template: auto auto / auto auto;
+         column-gap: rem(20);
+         row-gap: rem(25);
+
+         :nth-child(even) {
+            justify-self: end;
+         }
+      }
+
+      @media (max-width:640px) {
+         grid-template: auto/auto;
+         grid-auto-rows: auto;
+         row-gap: rem(25);
+      }
+   }
+
+   &__item {
+      @media (min-width:640px) {
+         max-width: rem(310);
+      }
+
+
+      &__img {
+         padding-bottom: rem(10);
+
+         @media (max-width: 700px) {
+            padding-bottom: rem(0);
+         }
+
+         svg {
+            width: rem(23);
+            height: rem(23);
+         }
+      }
+
+      &__title {
+         font-weight: 700;
+         @include adaptiveValue("font-size", 18, 16);
+         line-height: 150%;
+
+         &:not(:last-child) {
+            padding-bottom: rem(10);
+         }
+
+      }
+
+      &__text {
+         @include adaptiveValue("font-size", 18, 14);
+         line-height: 140%;
+         opacity: 0.75;
+
+         @media (max-width:960px) {
+            opacity: 0.5;
+         }
+      }
    }
 }

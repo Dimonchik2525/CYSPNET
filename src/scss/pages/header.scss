@@ -1,11 +1,36 @@
 //====================================================================================================
 .header {
-   background-color: #272937;
+   padding-top: rem(51);
+   position: fixed;
+   z-index: 20;
+   width: 100%;
+   top: 0;
+   left: 0;
+   transition: all 0.8s ease 0s;
+
+   .menu-open & {}
+
+   &._header-scroll {
+      padding-top: rem(25);
+      background-color: #272937;
+      padding-bottom: rem(25);
+      opacity: 0.75;
+      transition: all 0.5s ease 0s;
+
+      @media (any-hover: hover) {
+         &:hover {
+            opacity: 1;
+         }
+      }
+
+      .menu-open & {
+         opacity: 1;
+      }
+   }
 
    &__container {}
 
    &__block {
-      padding-top: rem(51);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -19,7 +44,7 @@
          flex-direction: column;
          position: absolute;
          width: 100%;
-         height: 100%;
+         height: 100vh;
          top: 0;
          left: -100%;
          overflow: auto;
@@ -35,12 +60,13 @@
 
       &__body {
          @media (max-width: 1250px) {
+            display: flex;
+            flex-direction: column;
             position: absolute;
             width: 56.23%;
-            height: 100%;
+            min-height: 100%;
             top: 0;
             right: 0;
-            background: green;
             opacity: 1;
             background: #2b2a39;
          }
