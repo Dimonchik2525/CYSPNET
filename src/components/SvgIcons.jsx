@@ -11,4 +11,8 @@ const SvgMicroIcon = () => <svg className="svg-svg-micro-dims"><use xlinkHref="i
 const SvgMoneyIcon = () => <svg className="svg-svg-money-dims"><use xlinkHref="img/icons/icons.svg#svg-money" /></svg>;
 const SvgRewardIcon = () => <svg className="svg-svg-reward-dims"><use xlinkHref="img/icons/icons.svg#svg-reward" /></svg>;
 const SvgLightIcon = () => <svg className="svg-svg-light-dims"><use xlinkHref="img/icons/icons.svg#svg-light" /></svg>;
-export { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon };
+const SvgUserIcon = () => <svg className="svg-svg-opportunities__1-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__1" /></svg>;
+const SvgOrganizationIcon = () => <svg className="svg-svg-opportunities__2-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__2" /></svg>;
+const SvgClubIcon = () => <svg className="svg-svg-opportunities__3-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__3" /></svg>;
+const SvgArenatIcon = () => <svg className="svg-svg-opportunities__4-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__4" /></svg>;
+export { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon };
