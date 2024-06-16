@@ -3,6 +3,7 @@
    background-color: #222432;
    position: relative;
    z-index: 3;
+   padding-top: rem(163);
 
    &__container {}
 
@@ -10,7 +11,6 @@
       display: grid;
       grid-template: auto/auto 31.59%;
       align-items: center;
-      @include adaptiveValue("padding-top", 52, 47);
       @include adaptiveValue("padding-bottom", 194, 50, 960, 640, 0);
       @include adaptiveValue("padding-bottom", 48, 48, 640, 360, 1);
 

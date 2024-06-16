@@ -1,7 +1,7 @@
 .hero {
    background: url('img/hero/hero__bg.png') 0 0 /cover no-repeat;
    background-color: #272937;
-   padding-top: rem(112);
+   @include adaptiveValue("padding-top", 112, 151, 1350, 360, 1);
 
    &__container {}
 
@@ -18,7 +18,7 @@
    }
 
    &__content {
-      @include adaptiveValue("padding-top", 0, 40, 1350, 960, 1);
+      //@include adaptiveValue("padding-top", 0, 40, 1350, 960, 1);
 
       &__title {
          line-height: 150%;

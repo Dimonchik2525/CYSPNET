@@ -11,51 +11,51 @@ export const Advantages = (props) => {
       imgArr = ''
    }
    return (
-      <div className="advantages">
+      <section className="advantages">
          <div className="advantages__container">
             <div className="advantages__block">
                <h2 className="advantages__title">Наши преимущества</h2>
                <div className="advantages__content">
-                  <div className="advantages__item">
+                  <article className="advantages__item">
                      <div className="advantages__item__img">
                         <SvgMicroIcon />
                      </div>
-                     <div className="advantages__item__title">Получите признание комьюнити</div>
+                     <h3 className="advantages__item__title">Получите признание комьюнити</h3>
                      <div className="advantages__item__text">Соберите фан-базу и делитесь своими достижениями! Расскажите о себе в постах и комментариях своего профиля.</div>
-                  </div>
+                  </article>
                   {imgArr[0]}
-                  <div className="advantages__item">
+                  <article className="advantages__item">
                      <div className="advantages__item__img">
                         <SvgRewardIcon />
                      </div>
-                     <div className="advantages__item__title">Попадите в топ-пользователей</div>
+                     <h3 className="advantages__item__title">Попадите в топ-пользователей</h3>
                      <div className="advantages__item__text">Развивайте свои навыки и получайте оценки и отзывы других пользователей! Вы ведь хотите стать лучшим в своей отрасли?</div>
-                  </div>
+                  </article>
                   {imgArr[1]}
                   {imgArr[2]}
-                  <div className="advantages__item">
+                  <article className="advantages__item">
                      <div className="advantages__item__img">
                         <SvgLightIcon />
                      </div>
-                     <div className="advantages__item__title">Используйте возможности на максимум</div>
+                     <h3 className="advantages__item__title">Используйте возможности на максимум</h3>
                      <div className="advantages__item__text">Попробуйте себя в роли тренера, аналитика и комментатора или организуйте свой собственный турнир!</div>
-                  </div>
+                  </article>
                   {imgArr[3]}
-                  <div className="advantages__item">
+                  <article className="advantages__item">
                      <div className="advantages__item__img">
                         <SvgMoneyIcon />
                      </div>
-                     <div className="advantages__item__title">
+                     <h3 className="advantages__item__title">
                         Монетизируйте свои навыки
-                     </div>
+                     </h3>
                      <div className="advantages__item__text">
                         Заработайте деньги за счёт своих навыков в разных отраслях киберспорта
                      </div>
-                  </div>
+                  </article>
                </div>
             </div>
          </div>
-      </div>
+      </section>
    );
 }
 

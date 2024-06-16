@@ -7,8 +7,8 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+//import Swiper from 'swiper';
+//import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,7 +28,7 @@ EffectFade, Lazy, Manipulation
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	/*if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
@@ -56,59 +56,59 @@ function initSliders() {
 			},
 			*/
 
-			// Пагинация
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+	// Пагинация
+	/*
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	*/
 
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+	// Скроллбар
+	/*
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true,
+	},
+	*/
 
-			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+	// Кнопки "влево/вправо"
+	/*navigation: {
+		prevEl: '.swiper-button-prev',
+		nextEl: '.swiper-button-next',
+	},*/
 
-			// Брейкпоинты
-			/*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// События
-			on: {
+	// Брейкпоинты
+	/*
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1268: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		},
+	},
+	
+	// События
+	on: {
 
-			}
-		});
 	}
+});
+}*/
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
-function initSlidersScroll() {
+/*function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
 	if (sliderScrollItems.length > 0) {
 		for (let index = 0; index < sliderScrollItems.length; index++) {
@@ -141,4 +141,4 @@ window.addEventListener("load", function (e) {
 	initSliders();
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
-});
+});*/

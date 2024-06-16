@@ -7,8 +7,8 @@ export const Main = (props) => {
    return (
       <div>
          <Hero size={props.size} />
-         {/* <About size={props.size} />
-         <Advantages size={props.size} /> */}
+         <About size={props.size} />
+         <Advantages size={props.size} />
          <Opportunities size={props.size} />
       </div>
    );

@@ -15,4 +15,32 @@ const SvgUserIcon = () => <svg className="svg-svg-opportunities__1-dims"><use xl
 const SvgOrganizationIcon = () => <svg className="svg-svg-opportunities__2-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__2" /></svg>;
 const SvgClubIcon = () => <svg className="svg-svg-opportunities__3-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__3" /></svg>;
 const SvgArenatIcon = () => <svg className="svg-svg-opportunities__4-dims"><use xlinkHref="img/icons/icons.svg#svg-opportunities__4" /></svg>;
-export { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon };
+const SvgArena1tIcon = () => <svg className="svg-svg-arena__1-dims"><use xlinkHref="img/icons/icons.svg#svg-arena__1" /></svg>;
+const SvgArena2tIcon = () => <svg className="svg-svg-arena__2-dims"><use xlinkHref="img/icons/icons.svg#svg-arena__2" /></svg>;
+const SvgArena3tIcon = () => <svg className="svg-svg-arena__3-dims"><use xlinkHref="img/icons/icons.svg#svg-arena__3" /></svg>;
+const SvgArena5tIcon = () => <svg className="svg-svg-arena__5-dims"><use xlinkHref="img/icons/icons.svg#svg-arena__5" /></svg>;
+const SvgArena6tIcon = () => <svg className="svg-svg-arena__6-dims"><use xlinkHref="img/icons/icons.svg#svg-arena__6" /></svg>;
+const SvgClub1tIcon = () => <svg className="svg-svg-club__1-dims"><use xlinkHref="img/icons/icons.svg#svg-club__1" /></svg>;
+const SvgClub2tIcon = () => <svg className="svg-svg-club__2-dims"><use xlinkHref="img/icons/icons.svg#svg-club__2" /></svg>;
+const SvgClub3tIcon = () => <svg className="svg-svg-club__3-dims"><use xlinkHref="img/icons/icons.svg#svg-club__3" /></svg>;
+const SvgClub4tIcon = () => <svg className="svg-svg-club__4-dims"><use xlinkHref="img/icons/icons.svg#svg-club__4" /></svg>;
+const SvgOrganization2tIcon = () => <svg className="svg-svg-organization__2-dims"><use xlinkHref="img/icons/icons.svg#svg-organization__2" /></svg>;
+const SvgOrganization3tIcon = () => <svg className="svg-svg-organization__2-dims"><use xlinkHref="img/icons/icons.svg#svg-organization__3" /></svg>;
+const SvgOrganization4tIcon = () => <svg className="svg-svg-organization__2-dims"><use xlinkHref="img/icons/icons.svg#svg-organization__4" /></svg>;
+const SvgUser2tIcon = () => <svg className="svg-svg-user__2-dims"><use xlinkHref="img/icons/icons.svg#svg-user__2" /></svg>;
+const SvgUser3tIcon = () => <svg className="svg-svg-user__3-dims"><use xlinkHref="img/icons/icons.svg#svg-user__3" /></svg>;
+const SvgUser4tIcon = () => <svg className="svg-svg-user__4-dims"><use xlinkHref="img/icons/icons.svg#svg-user__4" /></svg>;
+const SvgUser5tIcon = () => <svg className="svg-svg-user__5-dims"><use xlinkHref="img/icons/icons.svg#svg-user__5" /></svg>;
+const SvgUser6tIcon = () => <svg className="svg-svg-user__6-dims"><use xlinkHref="img/icons/icons.svg#svg-user__6" /></svg>;
+const SVGRubIcon = () => <svg className="svg-svg-rub-dims"><use xlinkHref="img/icons/icons.svg#svg-rub" /></svg>;
+const SVGSettingsIcon = () => <svg className="svg-svg-settings-dims"><use xlinkHref="img/icons/icons.svg#svg-settings" /></svg>;
+
+export {
+   SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
+   SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
+   SvgClub1tIcon, SvgClub2tIcon, SvgClub3tIcon, SvgClub4tIcon,
+   SvgOrganization2tIcon, SvgOrganization3tIcon, SvgOrganization4tIcon,
+   SvgUser2tIcon, SvgUser3tIcon, SvgUser4tIcon, SvgUser5tIcon, SvgUser6tIcon,
+   SVGRubIcon, SVGSettingsIcon
+
+};

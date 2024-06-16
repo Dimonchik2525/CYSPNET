@@ -3,7 +3,7 @@ import Tooltip from "../../Common/Tooltip";
 
 export const Hero = (props) => {
    return (
-      <div className="hero">
+      <section className="hero">
          <div className="hero__container">
             <div className="hero__block">
                <div className="hero__content">
@@ -17,12 +17,12 @@ export const Hero = (props) => {
                      <li className="hero__content__item"><span>Развитие в любой отрасли киберспорта</span></li>
                      <li className="hero__content__item"><span>Интересный матчмейкинг</span></li>
                   </ul>
-                  <div className="hero__content__actions">
+                  <article className="hero__content__actions">
                      <Button class={'hero__content__actions__join'}>Присоединиться</Button>
                      <div className="hero__content__actions__about">
                         <button>О проекте</button>
                      </div>
-                  </div>
+                  </article>
                </div>
                <div className="hero__img">
                   <img src={props.size > 700 ? "img/hero/hero__img.png" : "img/hero/hero__img__2.png"} alt=""></img>
@@ -30,7 +30,7 @@ export const Hero = (props) => {
             </div>
          </div>
          {props.size > 960 ? <Tooltip /> : ''}
-      </div>
+      </section>
    );
 }
 

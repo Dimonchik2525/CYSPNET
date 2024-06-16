@@ -1,12 +1,11 @@
 .advantages {
    background: url('img/advantages/advantages__bg.png') 0 0 /cover no-repeat;
    background-color: #1d1f2d;
+   @include adaptiveValue("padding-top", 225, 151);
 
    &__container {}
 
-   &__block {
-      @include adaptiveValue("padding-top", 114, 40);
-   }
+   &__block {}
 
    &__img {
       @media (max-width:960px) {
