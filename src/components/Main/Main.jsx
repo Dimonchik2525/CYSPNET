@@ -1,5 +1,6 @@
 import About from "./About/About";
 import Advantages from "./Advantages/Advantages";
+import Choice from "./Choice/Choice";
 import Hero from "./Hero/Hero";
 import Opportunities from "./Opportunities/Opportunities";
 
@@ -10,6 +11,7 @@ export const Main = (props) => {
          <About size={props.size} />
          <Advantages size={props.size} />
          <Opportunities size={props.size} />
+         <Choice size={props.size} />
       </div>
    );
 }

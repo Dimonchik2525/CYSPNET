@@ -1,0 +1,35 @@
+.choice {
+   &__container {}
+
+   &__block {}
+
+   &__content {
+      &__title {}
+
+      &-main__slider {}
+
+      &-main__wrapper {}
+
+      &-main__slide {}
+
+      &-main__person {
+         &__img {
+            svg {}
+         }
+
+         &__title {}
+      }
+
+      &-text__slider {}
+
+      &-text__wrapper {}
+
+      &-text__slide {}
+
+      &-text__text {}
+   }
+
+   &__join {
+      button {}
+   }
+}

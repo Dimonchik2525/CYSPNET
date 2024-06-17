@@ -34,13 +34,20 @@ const SvgUser5tIcon = () => <svg className="svg-svg-user__5-dims"><use xlinkHref
 const SvgUser6tIcon = () => <svg className="svg-svg-user__6-dims"><use xlinkHref="img/icons/icons.svg#svg-user__6" /></svg>;
 const SVGRubIcon = () => <svg className="svg-svg-rub-dims"><use xlinkHref="img/icons/icons.svg#svg-rub" /></svg>;
 const SVGSettingsIcon = () => <svg className="svg-svg-settings-dims"><use xlinkHref="img/icons/icons.svg#svg-settings" /></svg>;
-
+const SVGAnaliticIcon = () => <svg className="svg-svg-choice__analitic-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__analitic" /></svg>;
+const SVGCoachIcon = () => <svg className="svg-svg-choice__coach-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__coach" /></svg>;
+const SVGComentatorIcon = () => <svg className="svg-svg-choice__commentator-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__commentator" /></svg>;
+const SVGJudgeIcon = () => <svg className="svg-svg-choice__judge-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__judge" /></svg>;
+const SVGManagerIcon = () => <svg className="svg-svg-choice__manager-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__manager" /></svg>;
+const SVGMouseIcon = () => <svg className="svg-svg-choice__mouse-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__mouse" /></svg>;
+const SVGSkautIcon = () => <svg className="svg-svg-choice__skaut-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__skaut" /></svg>;
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
    SvgClub1tIcon, SvgClub2tIcon, SvgClub3tIcon, SvgClub4tIcon,
    SvgOrganization2tIcon, SvgOrganization3tIcon, SvgOrganization4tIcon,
    SvgUser2tIcon, SvgUser3tIcon, SvgUser4tIcon, SvgUser5tIcon, SvgUser6tIcon,
-   SVGRubIcon, SVGSettingsIcon
+   SVGRubIcon, SVGSettingsIcon,
+   SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon
 
 };
