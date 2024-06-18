@@ -1,35 +1,261 @@
 .choice {
+   background: url('@img/choice/choice__bg.png') 0 0 /cover no-repeat;
+   background-color: #131523;
+   @include adaptiveValue("padding-top", 306, 161);
+
    &__container {}
 
-   &__block {}
+   &__block {
+      @include adaptiveValue("padding-bottom", 102, 42);
+      position: relative;
+   }
+
+   &__img-1 {
+      position: absolute;
+      top: rem(-45);
+      left: 0;
+   }
+
+   &__img-2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+
+   &__img-3 {
+      position: absolute;
+      top: rem(-100);
+      right: 0;
+   }
+
+   &__img-4 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+   }
 
    &__content {
-      &__title {}
+      @include adaptiveValue("padding-bottom", 110, 35);
+      @include adaptiveValue("padding-right", 50, 50, 1350, 640, 0);
+      @include adaptiveValue("padding-left", 50, 50, 1350, 640, 0);
 
-      &-main__slider {}
+      &__title {
+         text-align: center;
+         font-weight: 600;
+         line-height: 150%;
+         @include adaptiveValue("font-size", 46, 24);
+
+         &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 35, 25);
+         }
+      }
+
+      &-main__slider {
+         //overflow: visible;
+         margin: 0 auto;
+         max-width: rem(850);
+         position: relative;
+         z-index: 2;
+         top: rem(2);
+
+         @media (max-width:1060px) {
+            padding-bottom: rem(35);
+         }
+      }
 
       &-main__wrapper {}
 
-      &-main__slide {}
+      &-main__slide {
+         position: relative;
+         width: rem(100);
+         cursor: pointer;
 
-      &-main__person {
-         &__img {
-            svg {}
+         @media (max-width: 800px) {
+            display: flex;
+            justify-content: center;
          }
 
-         &__title {}
+         @media (max-width:1060px) {
+            width: rem(120);
+         }
+
+         &.active {
+            position: relative;
+
+            @media (min-width:1060px) {
+
+               &::before,
+               &::after {
+                  content: '';
+                  position: absolute;
+                  width: rem(30);
+                  height: rem(30);
+                  bottom: rem(0);
+                  z-index: 3;
+               }
+
+               &::before {
+                  content: '';
+                  left: rem(-28.3);
+                  border-bottom: rem(2) solid #fff;
+                  border-right: rem(2) solid #fff;
+                  border-radius: 0 0 rem(15) 0;
+               }
+
+               &::after {
+                  content: '';
+                  right: rem(-28.5);
+                  border-bottom: rem(2) solid #fff;
+                  border-left: rem(2) solid #fff;
+                  border-radius: 0 0 0 rem(15);
+               }
+            }
+         }
       }
 
-      &-text__slider {}
+      &-main__person {
+         width: rem(100);
+         height: rem(131);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         row-gap: rem(12);
+         position: relative;
+
+         .active & {
+            @media (min-width:1060px) {
+               &::after {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 85%;
+                  top: 0;
+                  left: rem(0);
+                  border-radius: rem(15) rem(15) 0 rem(0);
+                  border: rem(2) solid #fff;
+                  border-bottom: rem(0);
+               }
+            }
+
+            @media (min-width:1060px) {
+               &::before {
+                  content: '';
+                  position: absolute;
+                  width: 125%;
+                  height: 10%;
+                  bottom: 0;
+                  left: -10%;
+                  background-color: #131523;
+                  z-index: 2;
+               }
+            }
+         }
+
+         @media (max-width:1060px) {
+            width: rem(120);
+            border: rem(1) solid #fff;
+            border-radius: rem(15);
+         }
+
+
+         &__img {
+            svg {
+               fill: rgba(255, 255, 255, 0.5);
+               width: rem(48);
+               height: rem(48);
+               transition: all 0.5s ease 0s;
+
+               .active & {
+                  fill: #ff5c69;
+               }
+            }
+         }
+
+         &__title {
+            font-size: rem(15);
+            line-height: 150%;
+            opacity: 0.5;
+            transition: all 0.5s ease 0s;
+
+            .active & {
+               opacity: 1;
+            }
+         }
+      }
+
+      &-text__slider {
+         position: relative;
+      }
+
+      .choice__content-text__main-wrapper {
+         max-width: rem(885);
+         position: relative;
+         margin: 0 auto;
+      }
+
+      &-text__navigation {
+         button {
+            border-radius: rem(15);
+            border: rem(1) solid #fff;
+            padding: rem(13) rem(19);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+
+         svg {
+            stroke-width: 1.50px;
+            stroke: #fff;
+            width: rem(15);
+            height: rem(26);
+         }
+
+         &__left {
+            @include adaptiveValue("left", -85, -65, 1350, 640, 1);
+
+
+            svg {
+               transform: rotate(90deg);
+            }
+         }
+
+         &__right {
+            @include adaptiveValue("right", -85, -65, 1350, 640, 1);
+
+            svg {
+               transform: rotate(-90deg);
+            }
+         }
+      }
 
       &-text__wrapper {}
 
       &-text__slide {}
 
-      &-text__text {}
+      &-text__text {
+         @include adaptiveValue("font-size", 18, 14);
+         line-height: 150%;
+         opacity: 0.75;
+         border: rem(2) solid #fff;
+         border-radius: 15px;
+         padding: rem(46) rem(47);
+
+         @media (max-width:640px) {
+            padding: rem(25);
+            line-height: 140%;
+            border: rem(1) solid #fff;
+         }
+      }
    }
 
    &__join {
+      margin: 0 auto;
+      width: rem(224);
+
       button {}
    }
 }
