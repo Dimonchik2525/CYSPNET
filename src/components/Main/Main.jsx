@@ -7,10 +7,11 @@ import Opportunities from "./Opportunities/Opportunities";
 export const Main = (props) => {
    return (
       <div>
+         <Error size={props.size} />
          <Hero size={props.size} />
-         {/* <About size={props.size} />
+         <About size={props.size} />
          <Advantages size={props.size} />
-         <Opportunities size={props.size} /> */}
+         <Opportunities size={props.size} />
          <Choice size={props.size} />
       </div>
    );

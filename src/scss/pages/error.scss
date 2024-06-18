@@ -1,0 +1,21 @@
+.error {
+   &__container {}
+
+   &__block {}
+
+   &__content {
+      &__title {}
+
+      &__text {}
+
+      &__button {
+         button {}
+      }
+   }
+
+   &__img {
+      img {
+         max-width: 100%;
+      }
+   }
+}
