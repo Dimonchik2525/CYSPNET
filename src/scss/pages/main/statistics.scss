@@ -1,0 +1,19 @@
+.statistics {
+   &__container {}
+
+   &__block {}
+
+   &__content {
+      &__item {
+         &__number {}
+
+         &__text {}
+
+         &__dott {}
+      }
+   }
+
+   &__img {
+      img {}
+   }
+}

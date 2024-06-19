@@ -4,6 +4,7 @@ import Advantages from "./Advantages/Advantages";
 import Choice from "./Choice/Choice";
 import Hero from "./Hero/Hero";
 import Opportunities from "./Opportunities/Opportunities";
+import Statistics from "./Statistics/Statistics";
 
 export const Main = (props) => {
    return (
@@ -14,6 +15,7 @@ export const Main = (props) => {
          <Advantages size={props.size} />
          <Opportunities size={props.size} />
          <Choice size={props.size} />
+         <Statistics size={props.size} />
       </div>
    );
 }
