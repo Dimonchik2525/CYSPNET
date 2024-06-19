@@ -1,6 +1,7 @@
 import Button from "../Common/Button";
+import Tooltip from "../Common/Tooltip";
 
-export const Error = () => {
+export const Error = (props) => {
    return (
       <div className="error">
          <div className="error__container">
@@ -15,6 +16,7 @@ export const Error = () => {
                </div>
             </div>
          </div>
+         {props.size > 960 ? <Tooltip /> : ''}
       </div>
    );
 }

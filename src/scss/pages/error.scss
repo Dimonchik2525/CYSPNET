@@ -1,21 +1,67 @@
 .error {
+   background: url('img/error/error__bg.png')0 0 /cover no-repeat;
+   background-color: #272937;
+   padding-top: rem(171);
+   @include adaptiveValue("padding-top", 171, 128, 1345, 640, 1);
+   @include adaptiveValue("padding-top", 128, 161, 640, 320, 1);
+   @include adaptiveValue("padding-bottom", 182, 0, 1345, 640, 1);
+   overflow: hidden;
+
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: auto/auto 57.249%;
+      column-gap: rem(20);
+      align-items: center;
+
+      @media (max-width:640px) {
+         grid-template: auto auto /auto;
+      }
+   }
 
    &__content {
-      &__title {}
+      justify-self: end;
 
-      &__text {}
+      @media (max-width:640px) {
+         justify-self: start;
+      }
+
+      &__title {
+         font-weight: 700;
+         @include adaptiveValue("font-size", 250, 150);
+         color: #FFFFFF;
+      }
+
+      &__text {
+         font-weight: 100;
+         @include adaptiveValue("font-size", 96, 54);
+
+         &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 50, 25);
+         }
+      }
 
       &__button {
+         @include adaptiveValue("width", 331, 285);
+
          button {}
       }
    }
 
    &__img {
-      img {
-         max-width: 100%;
+      margin-right: rem(-90);
+
+      @media (max-width:640px) {
+         margin-right: rem(-190);
+         margin-bottom: rem(-80);
+
+         img {
+            transform: rotate(15deg);
+            max-width: 100%;
+         }
       }
+
+      img {}
    }
 }
