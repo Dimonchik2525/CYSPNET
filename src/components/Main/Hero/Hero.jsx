@@ -3,7 +3,7 @@ import Tooltip from "../../Common/Tooltip";
 
 export const Hero = (props) => {
    return (
-      <section className="hero">
+      <section id="main" className="hero">
          <div className="hero__container">
             <div className="hero__block">
                <div className="hero__content">

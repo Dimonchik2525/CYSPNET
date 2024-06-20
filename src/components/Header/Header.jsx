@@ -19,7 +19,7 @@ export const Header = (props) => {
    </div>
 
    return (
-      <header data-scroll="112" className="header">
+      <header id="header" data-scroll="112" className="header">
          <div className="header__container">
             <div className="header__block">
                <div className="menu__logo">
@@ -32,14 +32,18 @@ export const Header = (props) => {
                   document.documentElement.classList.toggle('menu-open')
                   document.documentElement.classList.toggle('lock')
                }} className="header__menu menu">
-                  <nav onClick={(e) => e.stopPropagation()} className="menu__body">
+                  <nav onClick={(e) => {
+                     if (!e.target.closest('a')) {
+                        e.stopPropagation()
+                     }
+                  }} className="menu__body">
                      <ul className="menu__list">
-                        <li className="menu__item"><a href="" className="menu__link">Главная</a></li>
-                        <li className="menu__item"><a href="" className="menu__link">О проекте</a></li>
-                        <li className="menu__item"><a href="" className="menu__link">Возможности</a></li>
-                        <li className="menu__item"><a href="" className="menu__link">Карточки</a></li>
-                        <li className="menu__item"><a href="" className="menu__link">Статистика</a></li>
-                        <li className="menu__item"><a href="" className="menu__link">FAQ</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#main' className="menu__link">Главная</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#about' className="menu__link">О проекте</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#opportunities' className="menu__link">Возможности</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#cards' className="menu__link">Карточки</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#statistics' className="menu__link">Статистика</a></li>
+                        <li className="menu__item"><a href="#" data-goto='#faq' className="menu__link">FAQ</a></li>
                      </ul>
                      {props.size < 640 ? access : ''}
                      {props.size < 1250 ? beta : ''}
