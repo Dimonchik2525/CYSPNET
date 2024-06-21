@@ -203,7 +203,8 @@ export function spollers() {
       function initSpollers(spollersArray, matchMedia = false) {
          spollersArray.forEach(spollersBlock => {
             spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-            if (matchMedia.matches || !matchMedia) {
+            if (matchMedia.matches || matchMedia) {
+
                spollersBlock.classList.add('_spoller-init');
                initSpollerBody(spollersBlock);
                spollersBlock.addEventListener("click", setSpollerAction);
@@ -233,6 +234,7 @@ export function spollers() {
          }
       }
       function setSpollerAction(e) {
+         console.log('work');
          const el = e.target;
          if (el.closest('[data-spoller]')) {
             const spollerTitle = el.closest('[data-spoller]');

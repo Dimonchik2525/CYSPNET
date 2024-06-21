@@ -1,0 +1,17 @@
+.faq {
+   background-color: black;
+
+   &__container {}
+
+   &__block {}
+
+   &__title {}
+
+   &__spollers {
+      &__item {}
+
+      &__title {}
+
+      &__body {}
+   }
+}
