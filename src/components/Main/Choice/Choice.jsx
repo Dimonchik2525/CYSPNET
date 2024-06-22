@@ -189,7 +189,7 @@ export const Choice = (props) => {
    }, [props.size]);
 
    return (
-      <div className="choice">
+      <div id="choice" className="choice">
          <div className="choice__container">
             <div className="choice__block">
                <div className="choice__content">

@@ -1,6 +1,6 @@
 export const Faq = () => {
    return (
-      <div className="faq">
+      <div id="faq" className="faq">
          <div className="faq__container">
             <div className="faq__block">
                <h2 className="faq__title">FAQ</h2>

@@ -208,7 +208,7 @@ export const Opportunities = () => {
       };
    }, []);
    return (
-      <div className="opportunities">
+      <div id="opportunities" className="opportunities">
          <div className="opportunities__container">
             <div className="opportunities__block">
                <div className="opportunities__title">Предоставляем массу возможностей</div>

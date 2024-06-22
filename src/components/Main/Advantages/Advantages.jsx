@@ -11,7 +11,7 @@ export const Advantages = (props) => {
       imgArr = ''
    }
    return (
-      <section className="advantages">
+      <section id="advantages" className="advantages">
          <div className="advantages__container">
             <div className="advantages__block">
                <h2 className="advantages__title">Наши преимущества</h2>

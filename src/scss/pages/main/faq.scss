@@ -1,17 +1,89 @@
 .faq {
+   background: url("@img/faq/faq__bg.png")0 0 /cover no-repeat;
    background-color: black;
+   @include adaptiveValue("padding-top", 184, 161);
+   @include adaptiveValue("padding-bottom", 296, 125);
 
    &__container {}
 
    &__block {}
 
-   &__title {}
+   &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 46, 24);
+      line-height: 150%;
+
+      &:not(:last-child) {
+         padding-bottom: rem(25);
+      }
+   }
 
    &__spollers {
-      &__item {}
+      gap: rem(25);
 
-      &__title {}
+      &__item {
+         border: rem(1) solid #fff;
+         border-radius: rem(15);
+         padding: rem(20) rem(25);
 
-      &__body {}
+         &._spollerItem-active {
+            padding: rem(20) rem(25) rem(23) rem(25);
+         }
+      }
+
+      &__title {
+         border: rem(0) solid #fff;
+         border-radius: rem(0);
+         padding: 0;
+         padding-right: rem(30);
+         @include adaptiveValue("font-size", 24, 18);
+
+         &:not(:last-child) {
+            padding-bottom: rem(10);
+         }
+
+         ._spoller-init & {
+            cursor: pointer;
+
+            &::before,
+            &::after {
+               content: "";
+               position: absolute;
+               right: 10px;
+               top: 50%;
+               background-color: #fff;
+               height: 2px;
+               width: rem(15);
+               transition: transform 0.5s ease 0s;
+            }
+
+            &::before {
+               transform: translate(-75%, -50%) rotate(40deg);
+            }
+
+            &::after {
+               transform: translate(0, -50%) rotate(-40deg);
+            }
+
+            &._spoller-active {
+               &::before {
+                  transform: translateX(-75%) rotate(-40deg);
+               }
+
+               &::after {
+                  transform: rotate(40deg);
+               }
+            }
+         }
+      }
+
+      &__body {
+         border: rem(0) solid #fff;
+         border-radius: rem(0);
+         padding: 0;
+         @include adaptiveValue("font-size", 18, 14);
+         line-height: 140%;
+         opacity: 0.75;
+      }
    }
 }
