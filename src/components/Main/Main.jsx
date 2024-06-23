@@ -1,4 +1,5 @@
 import Error from "../Error/Error";
+import MainFooter from "../Footer/MainFooter";
 import About from "./About/About";
 import Advantages from "./Advantages/Advantages";
 import Choice from "./Choice/Choice";
@@ -18,6 +19,7 @@ export const Main = (props) => {
          <Choice size={props.size} />
          <Statistics size={props.size} />
          <Faq size={props.size} />
+         <MainFooter size={props.size} />
       </div>
    );
 }

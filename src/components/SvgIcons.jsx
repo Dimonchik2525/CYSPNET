@@ -41,6 +41,13 @@ const SVGJudgeIcon = () => <svg className="svg-svg-choice__judge-dims"><use xlin
 const SVGManagerIcon = () => <svg className="svg-svg-choice__manager-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__manager" /></svg>;
 const SVGMouseIcon = () => <svg className="svg-svg-choice__mouse-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__mouse" /></svg>;
 const SVGSkautIcon = () => <svg className="svg-svg-choice__skaut-dims"><use xlinkHref="img/icons/icons.svg#svg-choice__skaut" /></svg>;
+
+const SVGSInstaIcon = () => <svg className="svg-svg-footerNav__instagramm-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__instagramm" /></svg>;
+const SVGSTwichIcon = () => <svg className="svg-svg-footerNav__twich-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__twich" /></svg>;
+const SVGSTwitterIcon = () => <svg className="svg-svg-footerNav__twitter-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__twitter" /></svg>;
+const SVGSVkIcon = () => <svg className="svg-svg-footerNav__vk-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__vk" /></svg>;
+const SVGYoutubeIcon = () => <svg className="svg-svg-footerNav__youtube-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__youtube" /></svg>;
+
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
@@ -48,6 +55,7 @@ export {
    SvgOrganization2tIcon, SvgOrganization3tIcon, SvgOrganization4tIcon,
    SvgUser2tIcon, SvgUser3tIcon, SvgUser4tIcon, SvgUser5tIcon, SvgUser6tIcon,
    SVGRubIcon, SVGSettingsIcon,
-   SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon
+   SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon,
+   SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon
 
 };

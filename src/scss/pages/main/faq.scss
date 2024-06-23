@@ -1,6 +1,6 @@
 .faq {
    background: url("@img/faq/faq__bg.png")0 0 /cover no-repeat;
-   background-color: black;
+   background-color: #040614;
    @include adaptiveValue("padding-top", 184, 161);
    @include adaptiveValue("padding-bottom", 296, 125);
 
@@ -24,22 +24,25 @@
       &__item {
          border: rem(1) solid #fff;
          border-radius: rem(15);
-         padding: rem(20) rem(25);
+         padding: 0;
 
          &._spollerItem-active {
-            padding: rem(20) rem(25) rem(23) rem(25);
+            // padding: rem(20) rem(25);
+            // padding: rem(20) rem(25) rem(23) rem(25);
          }
       }
 
       &__title {
          border: rem(0) solid #fff;
-         border-radius: rem(0);
-         padding: 0;
+         border-radius: rem(15);
+         padding: rem(20) rem(25);
          padding-right: rem(30);
          @include adaptiveValue("font-size", 24, 18);
 
-         &:not(:last-child) {
-            padding-bottom: rem(10);
+         &._spoller-active {
+            padding: rem(20) rem(25) rem(23) rem(25);
+            // border-radius: rem(0);
+            // padding: 0;
          }
 
          ._spoller-init & {
@@ -80,7 +83,7 @@
       &__body {
          border: rem(0) solid #fff;
          border-radius: rem(0);
-         padding: 0;
+         padding: rem(0) rem(25) rem(20) rem(25);
          @include adaptiveValue("font-size", 18, 14);
          line-height: 140%;
          opacity: 0.75;
