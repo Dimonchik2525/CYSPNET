@@ -11,7 +11,7 @@ export const FooterNav = (props) => {
                      <div className="footerNav__image__text">CYSPNET</div>
                   </article>
                   <article className="footerNav__navigation">
-                     <div className="footerNav__navigation__title">Навигация</div>
+                     <h3 className="footerNav__navigation__title">Навигация</h3>
                      <ul className="footerNav__navigation__list">
                         <li className="footerNav__navigation__item">
                            <a href="" className="footerNav__navigation__link">Главная</a>
@@ -34,7 +34,7 @@ export const FooterNav = (props) => {
                      </ul>
                   </article>
                   <article className="footerNav__others">
-                     <div className="footerNav__others__title">Разное</div>
+                     <h3 className="footerNav__others__title">Разное</h3>
                      <ul className="footerNav__others__list">
                         <li className="footerNav__others__item">
                            <a href="" className="footerNav__others__link">Поддержать проект</a>
@@ -48,7 +48,7 @@ export const FooterNav = (props) => {
                      </ul>
                   </article>
                   <article className="footerNav__socials">
-                     <div className="footerNav__socials__title">Соц. сети</div>
+                     <h3 className="footerNav__socials__title">Соц. сети</h3>
                      <ul className="footerNav__socials__list">
                         <li className="footerNav__socials__item">
                            <a href="" className="footerNav__socials__link">
