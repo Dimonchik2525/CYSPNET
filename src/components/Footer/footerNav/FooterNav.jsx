@@ -2,7 +2,7 @@ import { SVGSInstaIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon, SVGYoutubeIc
 
 export const FooterNav = (props) => {
    return (
-      <div className="footerNav">
+      <section className="footerNav">
          <div className="footerNav__container">
             <div className="footerNav__block">
                <nav className="footerNav__main">
@@ -14,22 +14,22 @@ export const FooterNav = (props) => {
                      <h3 className="footerNav__navigation__title">Навигация</h3>
                      <ul className="footerNav__navigation__list">
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">Главная</a>
+                           <a data-goto='#main' href="#" className="footerNav__navigation__link">Главная</a>
                         </li>
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">О проекте</a>
+                           <a data-goto='#about' href="#" className="footerNav__navigation__link">О проекте</a>
                         </li>
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">Возможности</a>
+                           <a data-goto='#opportunities' href="#" className="footerNav__navigation__link">Возможности</a>
                         </li>
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">Карточки</a>
+                           <a href="#" data-goto='#cards' className="footerNav__navigation__link">Карточки</a>
                         </li>
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">Статистика</a>
+                           <a href="#" data-goto='#statistics' className="footerNav__navigation__link">Статистика</a>
                         </li>
                         <li className="footerNav__navigation__item">
-                           <a href="" className="footerNav__navigation__link">FAQ</a>
+                           <a href="#" data-goto='#faq' className="footerNav__navigation__link">FAQ</a>
                         </li>
                      </ul>
                   </article>
@@ -78,7 +78,7 @@ export const FooterNav = (props) => {
                      </ul>
                   </article>
                   <div className="footerNav__chicken">
-                     <img src="@img/footerNav/footerNav__chicken.png" alt="" />
+                     <img src="img/footerNav/footerNav__chicken.png" alt="" />
                   </div>
                </nav>
                <article className="footerNav__bottom">
@@ -88,7 +88,7 @@ export const FooterNav = (props) => {
                </article>
             </div>
          </div>
-      </div>
+      </section>
    );
 }
 

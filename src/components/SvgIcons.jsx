@@ -48,6 +48,10 @@ const SVGSTwitterIcon = () => <svg className="svg-svg-footerNav__twitter-dims"><
 const SVGSVkIcon = () => <svg className="svg-svg-footerNav__vk-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__vk" /></svg>;
 const SVGYoutubeIcon = () => <svg className="svg-svg-footerNav__youtube-dims"><use xlinkHref="img/icons/icons.svg#svg-footerNav__youtube" /></svg>;
 
+const SVGSupport1Icon = () => <svg className="svg-svg-footer__support__1-dims"><use xlinkHref="img/icons/icons.svg#svg-footer__support__1" /></svg>;
+const SVGSupport2Icon = () => <svg className="svg-svg-footer__support__2-dims"><use xlinkHref="img/icons/icons.svg#svg-footer__support__2" /></svg>;
+const SVGSupportVKIcon = () => <svg className="svg-svg-footer__support__vk-dims"><use xlinkHref="img/icons/icons.svg#svg-footer__support__vk" /></svg>;
+
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
@@ -56,6 +60,6 @@ export {
    SvgUser2tIcon, SvgUser3tIcon, SvgUser4tIcon, SvgUser5tIcon, SvgUser6tIcon,
    SVGRubIcon, SVGSettingsIcon,
    SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon,
-   SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon
-
+   SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon,
+   SVGSupport1Icon, SVGSupport2Icon, SVGSupportVKIcon
 };

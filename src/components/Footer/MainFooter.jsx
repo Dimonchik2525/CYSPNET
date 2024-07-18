@@ -1,10 +1,12 @@
 import FooterNav from "./footerNav/FooterNav";
+import FooterSupport from "./footerSupport/FooterSupport";
 
 export const MainFooter = () => {
    return (
-      <div className="MainFooter">
+      <footer className="MainFooter">
          <FooterNav />
-      </div>
+         <FooterSupport />
+      </footer>
    );
 }
 

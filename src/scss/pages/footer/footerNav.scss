@@ -8,6 +8,8 @@
    &__block {}
 
    &__main {
+      overflow: hidden;
+      position: relative;
       display: grid;
       grid-template: auto/ 1fr repeat(3, auto);
       @include adaptiveValue("padding-right", 87, 27, 1345, 640, 1);
@@ -51,10 +53,17 @@
 
    &__chicken {
       position: absolute;
-      top: 0;
-      left: 0;
+      bottom: rem(-68);
+      @include adaptiveValue("right", 385, 35, 1345, 640, 1);
 
-      img {}
+      img {
+         width: rem(217);
+         height: rem(209);
+      }
+
+      @media (max-width:640px) {
+         display: none;
+      }
    }
 
    &__image {

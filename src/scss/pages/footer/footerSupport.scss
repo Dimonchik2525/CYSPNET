@@ -1,0 +1,33 @@
+.footerSupport {
+   &__container {}
+
+   &__block {}
+
+   &__title {}
+
+   &__ideas {
+      &__title {}
+
+      &__subtitle {}
+
+      &__list {}
+
+      &__item {
+         &__title {}
+
+         &__link {}
+      }
+   }
+
+   &__crowdfunding {
+      &__title {}
+
+      &__list {}
+
+      &__item {}
+
+      &__link {
+         svg {}
+      }
+   }
+}
