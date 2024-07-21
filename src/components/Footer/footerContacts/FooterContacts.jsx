@@ -18,15 +18,23 @@ export const FooterContacts = () => {
                            <a href="#" className="footerContacts__content__socials__link">
                               <SVGSVkIcon />
                            </a>
+                        </li>
+                        <li className="footerContacts__content__socials__item">
                            <a href="#" className="footerContacts__content__socials__link">
                               <SVGYoutubeIcon />
                            </a>
+                        </li>
+                        <li className="footerContacts__content__socials__item">
                            <a href="#" className="footerContacts__content__socials__link">
                               <SVGSInstaIcon />
                            </a>
+                        </li>
+                        <li className="footerContacts__content__socials__item">
                            <a href="#" className="footerContacts__content__socials__link">
                               <SVGSTwitterIcon />
                            </a>
+                        </li>
+                        <li className="footerContacts__content__socials__item">
                            <a href="#" className="footerContacts__content__socials__link">
                               <SVGSTwichIcon />
                            </a>
