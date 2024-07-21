@@ -1,3 +1,4 @@
+import FooterContacts from "./footerContacts/FooterContacts";
 import FooterNav from "./footerNav/FooterNav";
 import FooterSupport from "./footerSupport/FooterSupport";
 
@@ -6,6 +7,7 @@ export const MainFooter = () => {
       <footer className="MainFooter">
          <FooterNav />
          <FooterSupport />
+         <FooterContacts />
       </footer>
    );
 }

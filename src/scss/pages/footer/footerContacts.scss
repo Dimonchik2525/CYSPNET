@@ -1,0 +1,27 @@
+.footerContacts {
+   &__container {}
+
+   &__block {}
+
+   &__title {}
+
+   &__content {
+      &__mail {
+         &__title {}
+
+         &__link {}
+      }
+
+      &__socials {
+         &__title {}
+
+         &__list {}
+
+         &__item {}
+
+         &__link {
+            svg {}
+         }
+      }
+   }
+}
