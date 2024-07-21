@@ -13,12 +13,12 @@ export const Main = (props) => {
       <div>
          {/* <Error size={props.size} /> */}
          <Hero size={props.size} />
-         {/* <About size={props.size} />
+         <About size={props.size} />
          <Advantages size={props.size} />
          <Opportunities size={props.size} />
          <Choice size={props.size} />
          <Statistics size={props.size} />
-         <Faq size={props.size} /> */}
+         <Faq size={props.size} />
          <MainFooter size={props.size} />
       </div>
    );
