@@ -1,33 +1,120 @@
 .footerSupport {
+   background: url('@img/footer__support/footer__support__bg.png')0 0/cover no-repeat;
+   background-color: #00010f;
+   @include adaptiveValue("padding-top", 211, 161);
+   @include adaptiveValue("padding-bottom", 391, 214);
+
    &__container {}
 
    &__block {}
 
-   &__title {}
+   &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(38);
+
+      @media (min-width:460px) {
+         flex-direction: row;
+         @include adaptiveValue("column-gap", 95, 68, 1345, 460, 1);
+      }
+   }
+
+   &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 46, 24);
+      line-height: 150%;
+      padding-bottom: rem(25);
+   }
 
    &__ideas {
-      &__title {}
+      max-width: rem(320);
 
-      &__subtitle {}
+      &__title {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 24, 18);
+         line-height: 150%;
 
-      &__list {}
+         &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 50, 25);
+         }
+      }
+
+      &__subtitle {
+         line-height: 150%;
+         @include adaptiveValue("font-size", 18, 14);
+         padding-bottom: rem(25);
+      }
+
+      &__list {
+         display: flex;
+         flex-direction: column;
+         row-gap: rem(25);
+      }
 
       &__item {
-         &__title {}
+         &__title {
+            font-weight: 600;
+            @include adaptiveValue("font-size", 24, 16);
 
-         &__link {}
+            &:not(:last-child) {
+               padding-bottom: rem(8);
+            }
+         }
+
+         &__link {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: #f04451;
+            @include adaptiveValue("font-size", 18, 14);
+            transition: all 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  color: #ff858f;
+               }
+            }
+         }
       }
    }
 
    &__crowdfunding {
-      &__title {}
+      &__title {
+         font-weight: 600;
+         @include adaptiveValue("font-size", 24, 18);
+         line-height: 150%;
 
-      &__list {}
+         &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 50, 25);
+         }
+      }
+
+      &__list {
+         display: flex;
+         column-gap: rem(25)
+      }
 
       &__item {}
 
       &__link {
-         svg {}
+         @include adaptiveValue("width", 55, 50);
+         @include adaptiveValue("height", 55, 50);
+         border-radius: 15px;
+         background-color: #141523;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         svg {
+            @include adaptiveValue("width", 40, 25);
+            @include adaptiveValue("height", 40, 25);
+            transition: all 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  fill: #475ffe;
+               }
+            }
+         }
       }
    }
 }
