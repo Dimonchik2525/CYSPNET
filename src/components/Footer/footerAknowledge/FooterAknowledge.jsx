@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
+import { SvgArrowIcon } from "../../SvgIcons";
 
 export const FooterAknowledge = (props) => {
    let mainArray = [
@@ -27,15 +28,44 @@ export const FooterAknowledge = (props) => {
       'Anomidae',
       'Кирилл Weblucker',
       'Юркив Марьяна',
+      'Axel Rockets',
+      'Дмитрий Авданин',
+      'Павел Седой',
+      'Артём Кудрявец',
+      'Геннадий Зозуля',
+      'Anomidae',
+      'Кирилл Weblucker',
+      'Юркив Марьяна',
+      'Axel Rockets',
+      'Дмитрий Авданин',
+      'Павел Седой',
+      'Артём Кудрявец',
+      'Геннадий Зозуля',
+      'Anomidae',
+      'Кирилл Weblucker',
+      'Юркив Марьяна',
    ]
    let mainSlider = []
-   mainArray.map((item, ind) => {
-      mainSlider.push(
-         <div className="footerAknowledge__slide swiper-slide">
+   function chunkArray(array, chunkSize) {
+      const result = [];
+      for (let i = 0; i < array.length; i += chunkSize) {
+         const chunk = array.slice(i, i + chunkSize);
+         mainSlider.push(
+            <div key={Math.random()} className="footerAknowledge__slide swiper-slide">
+               <div className="footerAknowledge__slide__wrapper">
+                  {chunk.map((item, index) => {
+                     return <div key={i + index} className="footerAknowledge__slide__item">
+                        {item}
+                     </div>
+                  })}
+               </div>
+            </div>
+         )
+      }
+   }
 
-         </div>
-      )
-   })
+   chunkArray(mainArray, 6);
+   console.log(mainSlider);
 
    useEffect(() => {
       let mainSlider;
@@ -46,43 +76,33 @@ export const FooterAknowledge = (props) => {
             observer: true,
             observeParents: true,
             slidesPerView: 4,
-            spaceBetween: 25,
+            spaceBetween: 30,
             autoHeight: true,
             speed: 800,
             slideToClickedSlide: false,
+            navigation: {
+               prevEl: '.footerAknowledge__navigation__left',
+               nextEl: '.footerAknowledge__navigation__right',
+            },
             breakpoints: {
-               /*320: {
+               320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+               },
+               430: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 50,
                },
-               470: {
+               700: {
                   slidesPerView: 3,
                   spaceBetween: 20,
                },
-               600: {
+               960: {
                   slidesPerView: 4,
-                  spaceBetween: 20,
                },
-               640: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-               },
-               680: {
-                  slidesPerView: 4,
-                  spaceBetween: 20,
-               },
-               820: {
-                  slidesPerView: 5,
-                  spaceBetween: 20,
-               },
-               1060: {
-                  slidesPerView: 7,
-                  spaceBetween: 25,
-               },
-               1060: {
-                  slidesPerView: 7,
-                  spaceBetween: 25,
-               },*/
+               1345: {
+                  slidesPerView: 4
+               }
             },
          });
       }
@@ -104,7 +124,15 @@ export const FooterAknowledge = (props) => {
                <h3 className="footerAknowledge__subtitle">На этой странице отображются имена или никнеймы людей, которые вложили свой вклад в развитие проекта</h3>
                <div className="footerAknowledge__slider swiper">
                   <div className="footerAknowledge__wrapper swiper-wrapper">
-
+                     {mainSlider}
+                  </div>
+                  <div className="footerAknowledge__navigation">
+                     <button className="footerAknowledge__navigation__left">
+                        <SvgArrowIcon />
+                     </button>
+                     <button className="footerAknowledge__navigation__right">
+                        <SvgArrowIcon />
+                     </button>
                   </div>
                </div>
                <div className="footerAknowledge__howToGet">
