@@ -7,19 +7,21 @@ import Faq from "./Faq/Faq";
 import Hero from "./Hero/Hero";
 import Opportunities from "./Opportunities/Opportunities";
 import Statistics from "./Statistics/Statistics";
+import PersonalCards from "./PersonalCards/PersonalCards"
 
 export const Main = (props) => {
    return (
       <div>
          {/* <Error size={props.size} /> */}
          <Hero size={props.size} />
+         <PersonalCards />
          {/* <About size={props.size} />
          <Advantages size={props.size} />
          <Opportunities size={props.size} />
          <Choice size={props.size} />
          <Statistics size={props.size} />
-         <Faq size={props.size} /> */}
-         <MainFooter size={props.size} />
+         <Faq size={props.size} />
+         <MainFooter size={props.size} /> */}
       </div>
    );
 }

@@ -76,7 +76,7 @@ export const FooterAknowledge = (props) => {
             observer: true,
             observeParents: true,
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 100,
             autoHeight: true,
             speed: 800,
             slideToClickedSlide: false,

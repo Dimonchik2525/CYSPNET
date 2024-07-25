@@ -52,6 +52,15 @@ const SVGSupport1Icon = () => <svg className="svg-svg-footer__support__1-dims"><
 const SVGSupport2Icon = () => <svg className="svg-svg-footer__support__2-dims"><use xlinkHref="img/icons/icons.svg#svg-footer__support__2" /></svg>;
 const SVGSupportVKIcon = () => <svg className="svg-svg-footer__support__vk-dims"><use xlinkHref="img/icons/icons.svg#svg-footer__support__vk" /></svg>;
 
+const SVGCardDisciplineIcon = () => <svg className="svg-svg-card__discipline-dims"><use xlinkHref="img/icons/icons.svg#svg-card__discipline" /></svg>;
+const SVGCardCommunityIcon = () => <svg className="svg-svg-card__community-dims"><use xlinkHref="img/icons/icons.svg#svg-card__community" /></svg>;
+const SVGCardIndustryIcon = () => <svg className="svg-svg-card__industry-dims"><use xlinkHref="img/icons/icons.svg#svg-card__industry" /></svg>;
+const SVGCardKPDIcon = () => <svg className="svg-svg-card__kpd-dims"><use xlinkHref="img/icons/icons.svg#svg-card__kpd" /></svg>;
+const SVGCardLeageIcon = () => <svg className="svg-svg-card__leage-dims"><use xlinkHref="img/icons/icons.svg#svg-card__leage" /></svg>;
+const SVGCardRatingIcon = () => <svg className="svg-svg-card__rating-dims"><use xlinkHref="img/icons/icons.svg#svg-card__rating" /></svg>;
+const SVGCardRoleIcon = () => <svg className="svg-svg-card__role-dims"><use xlinkHref="img/icons/icons.svg#svg-card__role" /></svg>;
+const SVGCardWinRateIcon = () => <svg className="svg-svg-card__winrate-dims"><use xlinkHref="img/icons/icons.svg#svg-card__winrate" /></svg>;
+
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
@@ -61,5 +70,6 @@ export {
    SVGRubIcon, SVGSettingsIcon,
    SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon,
    SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon,
-   SVGSupport1Icon, SVGSupport2Icon, SVGSupportVKIcon
+   SVGSupport1Icon, SVGSupport2Icon, SVGSupportVKIcon,
+   SVGCardDisciplineIcon, SVGCardCommunityIcon, SVGCardIndustryIcon, SVGCardKPDIcon, SVGCardLeageIcon, SVGCardRatingIcon, SVGCardRoleIcon, SVGCardWinRateIcon
 };

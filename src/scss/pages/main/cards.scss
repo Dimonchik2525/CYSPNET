@@ -1,0 +1,39 @@
+.personalCards {
+   &__container {}
+
+   &__block {}
+
+   &__title {}
+
+   &__subtitle {}
+}
+
+.card {
+   &__img {
+      img {}
+   }
+
+   &__others {}
+
+   &__item {}
+
+   &__community {
+      svg {}
+   }
+
+   &__discipline {}
+
+   &__industry {}
+
+   &__kpd {}
+
+   &__leage {}
+
+   &__rating {}
+
+   &__role {}
+
+   &__winrate {}
+
+   &__nickname {}
+}
