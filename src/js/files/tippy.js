@@ -11,7 +11,16 @@ import "../../scss/base/tippy.scss";
 // Подключение cтилей из node_modules
 //import 'tippy.js/dist/tippy.css';
 
+import { mainArray } from "../../components/Main/PersonalCards/PersonalCards.jsx";
+
 // Запускаем и добавляем в объект модулей
-flsModules.tippy = tippy('#data-tippy-content', {
+flsModules.tippy = tippy('#d', {
    content: 'Во время открытого бета-тестирования будет доступна часть функций'
 });
+
+for (let item of Object.values(mainArray[0])) {
+   flsModules.tippy = tippy(`[data-tippy-content]`, {
+      theme: 'custom'
+   })
+}
+

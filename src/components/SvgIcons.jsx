@@ -61,6 +61,10 @@ const SVGCardRatingIcon = () => <svg className="svg-svg-card__rating-dims"><use 
 const SVGCardRoleIcon = () => <svg className="svg-svg-card__role-dims"><use xlinkHref="img/icons/icons.svg#svg-card__role" /></svg>;
 const SVGCardWinRateIcon = () => <svg className="svg-svg-card__winrate-dims"><use xlinkHref="img/icons/icons.svg#svg-card__winrate" /></svg>;
 
+const SVGCardInfoIcon = () => <svg className="svg-svg-card__info-dims"><use xlinkHref="img/icons/icons.svg#svg-card__info" /></svg>;
+const SVGCardSwiperIcon = () => <svg className="svg-svg-card__swiper-dims"><use xlinkHref="img/icons/icons.svg#svg-card__swiper" /></svg>;
+const SVGCardArrowIcon = () => <svg className="svg-svg-card__arrow-dims"><use xlinkHref="img/icons/icons.svg#svg-card__arrow" /></svg>;
+
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
@@ -71,5 +75,6 @@ export {
    SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGManagerIcon, SVGMouseIcon, SVGSkautIcon,
    SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon,
    SVGSupport1Icon, SVGSupport2Icon, SVGSupportVKIcon,
-   SVGCardDisciplineIcon, SVGCardCommunityIcon, SVGCardIndustryIcon, SVGCardKPDIcon, SVGCardLeageIcon, SVGCardRatingIcon, SVGCardRoleIcon, SVGCardWinRateIcon
+   SVGCardDisciplineIcon, SVGCardCommunityIcon, SVGCardIndustryIcon, SVGCardKPDIcon, SVGCardLeageIcon, SVGCardRatingIcon, SVGCardRoleIcon, SVGCardWinRateIcon,
+   SVGCardInfoIcon, SVGCardSwiperIcon, SVGCardArrowIcon
 };
