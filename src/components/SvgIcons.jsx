@@ -65,6 +65,9 @@ const SVGCardInfoIcon = () => <svg className="svg-svg-card__info-dims"><use xlin
 const SVGCardSwiperIcon = () => <svg className="svg-svg-card__swiper-dims"><use xlinkHref="img/icons/icons.svg#svg-card__swiper" /></svg>;
 const SVGCardArrowIcon = () => <svg className="svg-svg-card__arrow-dims"><use xlinkHref="img/icons/icons.svg#svg-card__arrow" /></svg>;
 
+const SVGLoginGoogleIcon = () => <svg className="svg-svg-login__google-dims"><use xlinkHref="img/icons/icons.svg#svg-login__google" /></svg>;
+const SVGLoginSteamIcon = () => <svg className="svg-svg-login__steam-dims"><use xlinkHref="img/icons/icons.svg#svg-login__steam" /></svg>;
+const SVGLoginEyeIcon = () => <svg className="svg-svg-login__eye-dims"><use xlinkHref="img/icons/icons.svg#svg-login__eye" /></svg>;
 export {
    SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon, SvgMoneyIcon, SvgMicroIcon, SvgLightIcon, SvgRewardIcon, SvgOrganizationIcon, SvgArenatIcon, SvgClubIcon, SvgUserIcon,
    SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon,
@@ -76,5 +79,6 @@ export {
    SVGSInstaIcon, SVGSTwitterIcon, SVGSTwichIcon, SVGSVkIcon, SVGYoutubeIcon,
    SVGSupport1Icon, SVGSupport2Icon, SVGSupportVKIcon,
    SVGCardDisciplineIcon, SVGCardCommunityIcon, SVGCardIndustryIcon, SVGCardKPDIcon, SVGCardLeageIcon, SVGCardRatingIcon, SVGCardRoleIcon, SVGCardWinRateIcon,
-   SVGCardInfoIcon, SVGCardSwiperIcon, SVGCardArrowIcon
+   SVGCardInfoIcon, SVGCardSwiperIcon, SVGCardArrowIcon,
+   SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGLoginEyeIcon
 };
