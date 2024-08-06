@@ -1,64 +1,129 @@
+import { useState, useEffect } from "react";
 import Button from "../Common/Button";
 import { SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
+import * as React from "react";
 
-export const Login = () => {
+export const Login = (props) => {
+   let [eye, setEye] = useState(false)
+   let [login, setLogin] = useState(false)
+   let [password, setPassword] = useState(false)
+   let [init, setInit] = useState(false)
+
+   useEffect(() => {
+      setInit(false)
+      setLogin(false)
+      setPassword(false)
+   }, [props.user])
+   function checkLogin() {
+      setInit(true)
+      for (let item of props.usersArray) {
+         console.log([item.login, props.user.login]);
+         if (item.mail == props.user.login) {
+            console.log('work');
+            setLogin(true)
+         }
+      }
+      /*for (let item of props.usersArray) {
+         if (item.mail == props.user.login && item.password !== props.user.password) {
+            setResult({ password: false, login: true })
+         }
+         if (item.mail !== props.user.login && item.password == props.user.password) {
+            setResult({ password: true, login: false })
+         }
+         if (item.mail == props.user.login && item.password == props.user.password) {
+            setResult({ password: true, login: true })
+         }
+      }*/
+   }
+
+   function checkPassword() {
+      setInit(true)
+      for (let item of props.usersArray) {
+         if (item.password == props.user.password) {
+            setPassword(true)
+         }
+      }
+
+   }
+
+   //console.log([login, password]);
    return (
-      <section className="login">
-         <div className="login__container">
-            <div className="login__block">
-               <div className="login__services">
-                  <h3 className="login__servises__title">
-                     Войти с помощью сервисов:
-                  </h3>
-                  <ul className="login__servises__list">
-                     <li className="login__servises__item">
-                        <a href="" className="login__servises__link">
-                           <SVGSTwichIcon />
-                        </a>
-                     </li>
-                     <li className="login__servises__item">
-                        <a href="" className="login__servises__link">
-                           <SVGLoginGoogleIcon />
-                        </a>
-                     </li>
-                     <li className="login__servises__item">
-                        <a href="" className="login__servises__link">
-                           <SVGSVkIcon />
-                        </a>
-                     </li>
-                     <li className="login__servises__item">
-                        <a href="" className="login__servises__link">
-                           <SVGLoginSteamIcon />
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               <div className="login__form-wrapper">
-                  <form action="" className="login__form">
-                     <div className="login__form__mail">
-                        <h3 className="login__form__mail__title">Электронная почта</h3>
-                        <input type="email" placeholder="Email" className="login__form__mail__input"></input>
-                     </div>
-                     <div className="login__form__password">
-                        <div className="login__form__password__eye">
-                           <SVGLoginEyeIcon />
+      <section className={`login ${props.loginActive ? 'login-open' : ''}`}>
+         <div className="login__wrapper">
+            <div className="login__container">
+               <div className="login__block">
+                  <div className="login__services">
+                     <h3 className="login__services__title">
+                        Войти с помощью сервисов:
+                     </h3>
+                     <ul className="login__services__list">
+                        <li className="login__services__item">
+                           <a href="" className="login__services__link">
+                              <SVGSTwichIcon />
+                           </a>
+                        </li>
+                        <li className="login__servises__item">
+                           <a href="" className="login__services__link">
+                              <SVGLoginGoogleIcon />
+                           </a>
+                        </li>
+                        <li className="login__servises__item">
+                           <a href="" className="login__services__link">
+                              <SVGSVkIcon />
+                           </a>
+                        </li>
+                        <li className="login__servises__item">
+                           <a href="" className="login__services__link">
+                              <SVGLoginSteamIcon />
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div className="login__between">Или</div>
+                  <div className="login__form-wrapper">
+                     <form onSubmit={(e) => {
+                        e.preventDefault()
+                     }} action="" className="login__form">
+                        <div className="login__form__mail">
+                           <h3 className="login__form__mail__title">Электронная почта</h3>
+                           <input onInvalid={(e) => e.preventDefault()} onChange={(e) => {
+                              //setResult({ ...result, login: e.target.value, })
+                              props.setUser({ ...props.user, login: e.target.value })
+                           }
+                           } type="email" placeholder="Email" className="login__form__mail__input"></input>
+                           {!login && init ? <div className="login__form__login__invalid">Invalid login. Try again</div> : ''}
                         </div>
-                        <input type="password" placeholder="Пароль" className="login__form__password__input"></input>
-                        <div className="login__form__password__forgot">Забыли пароль?</div>
-                     </div>
-                     <div className="login__form__anotherPC">
-                        <h3 className="login__form__anotherPC__title">Чужой компьютер</h3>
-                        <input type="checkbox" className="login__form__anotherPC__checkbox"></input>
-                     </div>
-                     <Button class={'login__form__enterence-button'}>Войти</Button>
-                  </form>
-               </div>
-               <div className="login__bottom">
-                  <h4 className="login__bottom__title">Нет аккаунта?</h4>
-                  <button className="login__bottom__button">Создать</button>
+                        <div className="login__form__password">
+                           <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
+                              <SVGLoginEyeIcon />
+                           </button>
+                           <input onChange={(e) => {
+                              // setResult({ ...result, password: e.target.value, })
+                              //checkPassword()
+                              props.setUser({ ...props.user, password: e.target.value })
+                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className="login__form__password__input"></input>
+                           {!password && init ? <div className="login__form__password__invalid">Invalid password. Try again</div> : ''}
+                           <button className="login__form__password__forgot">Забыли пароль?</button>
+                        </div>
+                        <div className="login__form__anotherPC">
+                           <div className=" login__form__anotherPC__checkboxcheckbox">
+                              <input id="c_1" data-error="Ошибка" className="login__form__anotherPC__input checkbox__input" type="checkbox" value="1" name="form[]" />
+                              <label htmlFor="c_1" className="checkbox__label"><span className="checkbox__text login__form__anotherPC__title">Чужой компьютер</span></label>
+                           </div>
+                        </div>
+                        <Button checkPassword={checkPassword} checkLogin={checkLogin} class={'login__form__enterence-button'}>Войти</Button>
+                     </form>
+                  </div>
+                  <div className="login__bottom">
+                     <h4 className="login__bottom__title">Нет аккаунта?</h4>
+                     <button className="login__bottom__button">Создать</button>
+                  </div>
                </div>
             </div>
-            <button className="login__cancel"></button>
+            <button onClick={() => {
+               document.documentElement.classList.remove('lock')
+               props.setLoginActive(false)
+            }} className="login__cancel  menu__icon"></button>
          </div>
       </section>
    );

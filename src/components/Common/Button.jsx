@@ -2,7 +2,12 @@
 
 export const Button = (props) => {
    return (
-      <div className={`${props.class} button`}>
+      <div onClick={() => {
+         if (props.class == 'login__form__enterence-button') {
+            props.checkLogin()
+            props.checkPassword()
+         }
+      }} className={`${props.class} button`}>
          <button>{props.children}</button>
       </div>
    );

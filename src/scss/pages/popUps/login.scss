@@ -1,110 +1,291 @@
 .login {
-   &__container {}
+   width: 0;
+   height: 0;
+   position: fixed;
+   backdrop-filter: blur(25px);
+   transition: all 0.8s ease 0s;
+   left: 50%;
+   top: 50%;
+   opacity: 0;
+   overflow: hidden;
 
-   &__block {}
+   &.login-open {
+      opacity: 1;
+      z-index: 500;
+      width: 100%;
+      height: 100%;
+      transition: all 0.8s ease 0s;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+   }
 
-   &__cancel {}
+   &__wrapper {
+      .login-open & {
+         //padding: rem(100) rem(0);
+         position: relative;
+         display: flex;
+         align-items: center;
+         margin: 0 auto;
+         background-color: #272937;
+         border: rem(1) solid rgba(255, 255, 255, 0.5);
+         border-radius: rem(50);
+         width: 80%;
+         height: 90%;
+         overflow: auto;
+
+         @media (max-width:425px) {
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      background: #272937;
+      //width: 80%;
+      height: 90%;
+      //overflow: hidden;
+      //padding: rem(100) 0 rem(50) rem(0);
+   }
+
+   &__block {
+      //padding: rem(100) 0 rem(50) rem(0);
+      width: rem(294);
+
+      @media (max-width:400px) {
+         width: 100%;
+      }
+   }
+
+   &__cancel {
+      position: absolute;
+      top: rem(50);
+      right: rem(50);
+   }
+
+   &__between {
+      text-align: center;
+      position: relative;
+      padding: rem(40) 0;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         width: rem(104);
+         height: rem(1);
+         background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      &::before {
+         content: '';
+         left: rem(10);
+      }
+
+      &::after {
+         content: '';
+         right: rem(10);
+      }
+   }
 
    &__services {
-      &__title {}
+      padding-top: rem(50);
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(15);
+      align-items: center;
 
-      &__list {}
+      &__title {
+         line-height: 150%;
+      }
+
+      &__list {
+         display: flex;
+         column-gap: rem(15);
+      }
 
       &__item {}
 
       &__link {
-         svg {}
+         width: rem(50);
+         height: rem(50);
+         border: rem(1) solid #fff;
+         border-radius: rem(15);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         svg {
+            height: rem(30);
+            width: rem(30);
+            fill: #fafafa;
+         }
       }
    }
 
    &__form-wrapper {}
 
    &__form {
-      &__mail {
-         &__title {}
+      display: grid;
+      row-gap: rem(25);
 
-         &__input {}
+      &__mail {
+         position: relative;
+
+         &__title {
+
+            display: inline;
+            position: absolute;
+            z-index: 2;
+            top: rem(-8);
+            left: rem(17);
+            font-size: rem(12);
+            line-height: 150%;
+            background-color: #272937;
+            padding: 0 rem(5);
+         }
+
+         &__input {
+            position: relative;
+            z-index: 1;
+            background-color: inherit;
+            width: 100%;
+            border: rem(1) solid rgba(255, 255, 255, 0.5);
+            border-radius: rem(15);
+            padding: rem(15) rem(10) rem(15) rem(15);
+            color: #fff;
+            line-height: 150%;
+         }
       }
 
       &__password {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         row-gap: rem(5);
+         position: relative;
+
          &__eye {
-            svg {}
+            z-index: 2;
+            position: absolute;
+            top: rem(15);
+            right: rem(15);
+
+            svg {
+               width: rem(24);
+               height: rem(24);
+               fill: #fff;
+            }
          }
 
-         &__input {}
+         &__input {
+            position: relative;
+            z-index: 1;
+            background-color: inherit;
+            width: 100%;
+            border: rem(1) solid rgba(255, 255, 255, 0.5);
+            border-radius: rem(15);
+            padding: rem(15) rem(10) rem(15) rem(15);
+            color: #fff;
+            line-height: 150%;
+         }
 
-         &__forgot {}
+         &__forgot {
+            align-self: end;
+            font-size: rem(14);
+            line-height: 150%;
+         }
       }
 
       &__anotherPC {
+         display: flex;
+         column-gap: rem(10);
+
          &__title {}
 
          &__checkbox {}
       }
 
-      &__enterence-button {}
+      &__enterence-button {
+         display: flex;
+         width: rem(126);
+         justify-self: center;
+      }
    }
 
    &__bottom {
-      &__title {}
+      padding-bottom: rem(50);
+      padding-top: rem(15);
+      display: flex;
+      column-gap: rem(5);
+      align-items: center;
+      justify-content: center;
 
-      &__button {}
+      &__title {
+         font-size: rem(14);
+         line-height: 150%;
+      }
+
+      &__button {
+         color: #f04451;
+         font-size: rem(14);
+         line-height: 150%;
+      }
    }
 }
 
 .login__cancel {
+   display: block;
+   width: rem(26);
+   height: rem(26);
+   cursor: pointer;
+   z-index: 10;
 
-   display: none;
+   span,
+   &::before,
+   &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #fff;
+   }
 
-   @media (max-width:1250px) {
-      display: block;
-      position: relative;
-      width: rem(30);
-      height: rem(18);
-      cursor: pointer;
-      z-index: 10;
+   &::before {
+      top: 0;
+   }
 
-      span,
-      &::before,
-      &::after {
-         content: "";
-         transition: all 0.3s ease 0s;
-         right: 0;
-         position: absolute;
-         width: 100%;
-         height: rem(2);
-         background-color: #fff;
+   &::after {
+      bottom: 0;
+   }
+
+   span {
+      top: calc(50% - rem(1));
+   }
+
+   .login-open & {
+      span {
+         width: 0;
       }
+
+      &::before,
+      &::after {}
 
       &::before {
-         top: 0;
+         top: calc(50% - rem(1));
+         transform: rotate(-45deg);
       }
 
       &::after {
-         bottom: 0;
-      }
-
-      span {
-         top: calc(50% - rem(1));
-      }
-
-      .menu-open & {
-         span {
-            width: 0;
-         }
-
-         &::before,
-         &::after {}
-
-         &::before {
-            top: calc(50% - rem(1));
-            transform: rotate(-45deg);
-         }
-
-         &::after {
-            bottom: calc(50% - rem(1));
-            transform: rotate(45deg);
-         }
+         bottom: calc(50% - rem(1));
+         transform: rotate(45deg);
       }
    }
 }
