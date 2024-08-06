@@ -3,12 +3,13 @@ import { useState } from "react";
 import Button from "../Common/Button";
 import { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon } from "../SvgIcons";
 import Login from "../PopUps/Login";
+import Registration from '../PopUps/Registration'
 import * as React from "react";
 
 export const Header = (props) => {
    let [loginActive, setLoginActive] = useState(false)
+   let [registrationActive, setRegistrationActive] = useState(false)
    let [user, setUser] = useState({ login: '', password: '' })
-   //console.log(user);
 
    let access = <div className="menu__access">
       <div onClick={() => {
@@ -17,7 +18,7 @@ export const Header = (props) => {
       }} className="menu__access__login">
          <button>Войти</button>
       </div>
-      <Button class={'menu__access__registration'}>Регистрация</Button>
+      <Button setRegistrationActive={setRegistrationActive} class={'menu__access__registration'}>Регистрация</Button>
    </div>
    let beta = <div className="menu__beta__wrapper">
       <a href="#" className="menu__beta">
@@ -66,6 +67,7 @@ export const Header = (props) => {
             </div>
          </header>
          <Login usersArray={props.usersArray} user={user} setUser={setUser} loginActive={loginActive} setLoginActive={setLoginActive} />
+         <Registration usersArray={props.usersArray} user={user} setUser={setUser} registrationActive={registrationActive} setRegistrationActive={setRegistrationActive}></Registration>
       </React.Fragment>
    );
 }

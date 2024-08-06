@@ -1,0 +1,34 @@
+.registration {
+   &__wrapper {}
+
+   &__container {}
+
+   &__block {}
+
+   &__form {
+      &__nickname {}
+
+      &__mail__nickname {}
+
+      &__mail__input {}
+
+      &__invalid {
+         span {}
+      }
+
+      &__mail {
+         &__title {}
+
+         &__input {}
+
+      }
+
+      &__password {
+         &__title {}
+
+         &__input {}
+      }
+
+      &__anotherPC {}
+   }
+}
