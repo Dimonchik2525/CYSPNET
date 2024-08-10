@@ -5,7 +5,7 @@ import Login from "./PopUps/Login"
 
 export const App = () => {
    let [size, setSize] = useState(document.documentElement.clientWidth)
-   let usersArray = [
+   let [usersArray, setUsersArray] = useState([
       {
          nickName: 'dima',
          mail: 'dima@gmail.com',
@@ -18,7 +18,14 @@ export const App = () => {
          password: '321',
          id: 2
       }
-   ]
+   ])
+
+   function addNewUser(user) {
+      let array = usersArray.slice(0)
+      user.id = array.length + 1
+      setUsersArray([...array, user])
+   }
+   console.log(usersArray);
    useEffect(() => {
       function handle() {
          return setSize(document.documentElement.clientWidth)
@@ -29,9 +36,11 @@ export const App = () => {
       };
    }, [])
 
+   //console.log(usersArray);
+
    return (
       <div className="wrapper">
-         <Header usersArray={usersArray} size={size} />
+         <Header addNewUser={addNewUser} usersArray={usersArray} size={size} />
          <Main size={size} />
       </div>
    )

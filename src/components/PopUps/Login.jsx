@@ -35,6 +35,18 @@ export const Login = (props) => {
       }
 
    }
+   useEffect(() => {
+      let inputArray = document.querySelectorAll('.popUp__input')
+      for (let input of inputArray) {
+         let title = input.previousElementSibling
+         input.onfocus = function () {
+            title.style.color = '#fff'
+         }
+         input.onblur = function () {
+            title.style.color = 'rgba(255, 255, 255, 0.5)'
+         }
+      }
+   }, [])
    return (
       <section className={`login ${props.loginActive ? 'login-open' : ''}`}>
          <div className="login__wrapper">
@@ -77,8 +89,8 @@ export const Login = (props) => {
                            <input onInvalid={(e) => e.preventDefault()} onChange={(e) => {
                               props.setUser({ ...props.user, login: e.target.value })
                            }
-                           } type="email" placeholder="Email" className="login__form__mail__input"></input>
-                           {!login && init ? <div className="login__form__login__invalid">Invalid login. Try again</div> : ''}
+                           } type="email" placeholder="Email" className=" popUp__input login__form__mail__input"></input>
+                           {!login && init ? <div className="login__invalid"><span>x</span>Invalid login. Try again</div> : ''}
                         </div>
                         <div className="login__form__password">
                            <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
@@ -86,14 +98,14 @@ export const Login = (props) => {
                            </button>
                            <input onChange={(e) => {
                               props.setUser({ ...props.user, password: e.target.value })
-                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className="login__form__password__input"></input>
-                           {!password && init ? <div className="login__form__password__invalid">Invalid password. Try again</div> : ''}
+                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input"></input>
+                           {!password && init ? <div className="login__invalid"><span>x</span>Invalid password. Try again</div> : ''}
                            <button className="login__form__password__forgot">Забыли пароль?</button>
                         </div>
                         <div className="login__form__anotherPC">
                            <div className=" login__form__anotherPC__checkboxcheckbox">
-                              <input id="c_1" data-error="Ошибка" className="login__form__anotherPC__input checkbox__input" type="checkbox" value="1" name="form[]" />
-                              <label htmlFor="c_1" className="checkbox__label"><span className="checkbox__text login__form__anotherPC__title">Чужой компьютер</span></label>
+                              <input id="a_1" data-error="Ошибка" className="login__form__anotherPC__input checkbox__input" type="checkbox" value="1" name="form[]" />
+                              <label htmlFor="a_1" className="checkbox__label"><span className="checkbox__text login__form__anotherPC__title">Чужой компьютер</span></label>
                            </div>
                         </div>
                         <Button checkPassword={checkPassword} checkLogin={checkLogin} class={'login__form__enterence-button'}>Войти</Button>

@@ -3,7 +3,13 @@
 
    &__container {}
 
-   &__block {}
+   &__block {
+      width: rem(312);
+
+      @media (max-width:400px) {
+         width: 100%;
+      }
+   }
 
    &__form {
       &__nickname {}
@@ -13,7 +19,17 @@
       &__mail__input {}
 
       &__invalid {
-         span {}
+         padding-top: rem(5);
+         display: flex;
+         column-gap: rem(13);
+         align-items: start;
+         color: #f04451;
+         font-size: rem(14);
+         line-height: 150%;
+
+         span {
+            font-size: rem(18);
+         }
       }
 
       &__mail {
@@ -29,6 +45,41 @@
          &__input {}
       }
 
-      &__anotherPC {}
+      &__anotherPC {
+         font-size: rem(14);
+         line-height: 150%;
+      }
+
+      &__enterance-button {
+         margin: 0 auto;
+         width: rem(260);
+      }
+   }
+}
+
+.registration__mailAprovement {
+   opacity: 0;
+   backdrop-filter: blur(25px);
+   position: fixed;
+   z-index: 5;
+   top: rem(20);
+   right: 50%;
+   border: rem(1) solid #fff;
+   border-radius: rem(15);
+   padding: rem(25) rem(35);
+   transform: translateX(50%);
+   transition: all 0.8s ease 0s;
+
+   &__title {
+      font-size: rem(24);
+
+      &:not(:last-child) {
+         padding-bottom: rem(10);
+      }
+   }
+
+   &__subtitle {
+      line-height: 150%;
+      opacity: 0.75;
    }
 }

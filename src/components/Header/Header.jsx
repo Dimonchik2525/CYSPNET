@@ -67,7 +67,7 @@ export const Header = (props) => {
             </div>
          </header>
          <Login usersArray={props.usersArray} user={user} setUser={setUser} loginActive={loginActive} setLoginActive={setLoginActive} />
-         <Registration usersArray={props.usersArray} user={user} setUser={setUser} registrationActive={registrationActive} setRegistrationActive={setRegistrationActive}></Registration>
+         <Registration addNewUser={props.addNewUser} usersArray={props.usersArray} user={user} setUser={setUser} registrationActive={registrationActive} setRegistrationActive={setRegistrationActive}></Registration>
       </React.Fragment>
    );
 }

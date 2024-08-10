@@ -65,7 +65,6 @@ export const FooterAknowledge = (props) => {
    }
 
    chunkArray(mainArray, 6);
-   console.log(mainSlider);
 
    useEffect(() => {
       let mainSlider;

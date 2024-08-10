@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Button from "../Common/Button";
 import { SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
 import * as React from "react";
@@ -7,37 +7,63 @@ export const Registration = (props) => {
    let [eye, setEye] = useState(false)
    let [login, setLogin] = useState(false)
    let [password, setPassword] = useState(false)
+   let [mail, setMail] = useState(false)
    let [init, setInit] = useState(false)
+   let [newUser, setNewUser] = useState({ nickname: '', mail: '', password: '', repeatPassword: '', id: '' })
+   let mailApprovementRef = useRef()
+
+   let mailApprovement = <div ref={mailApprovementRef} className="registration__mailAprovement">
+      <h3 className="registration__mailAprovement__title">На указанный адрес отправлено письмо с подтверждением</h3>
+      <h4 className="registration__mailAprovement__subtitle">Перейдите по ссылке в письме, чтобы привязать адрес к вашему аккаунту</h4>
+   </div>
 
    useEffect(() => {
       setInit(false)
       setLogin(false)
       setPassword(false)
-   }, [props.user])
+      setMail(false)
+   }, [newUser])
    function checkLogin() {
       setInit(true)
+      let string = newUser.nickname
       for (let item of props.usersArray) {
-         console.log([item.login, props.user.login]);
-         if (item.mail == props.user.login) {
-            console.log('work');
-            setLogin(true)
-         }
+         if (item.nickName == string) return false
+      }
+      const regex = /^[a-zA-Z0-9_-]+$/;
+      if (regex.test(string) && string.length > 2) {
+         setLogin(true)
+         return true
       }
    }
-
    function checkPassword() {
       setInit(true)
-      for (let item of props.usersArray) {
-         if (item.password == props.user.password) {
-            setPassword(true)
-         }
+      let string = newUser.password
+      const regex = /^[a-zA-Z0-9]+$/;
+      if (regex.test(string) && string.length > 5) {
+         setPassword(true)
+         return true
       }
-
+   }
+   function checkMail() {
+      setInit(true)
+      let string = newUser.mail
+      for (let item of props.usersArray) {
+         if (item.mail == string) return false
+      }
+      if (string.includes('@')) {
+         setMail(true)
+         return true
+      }
+   }
+   function comparePasswords() {
+      //if (newUser.password == newUser.repeatPassword) return true
+      return newUser.password !== newUser.repeatPassword ? false : true
    }
 
    return (
       <section className={`login registration ${props.registrationActive ? 'login-open' : ''}`}>
          <div className="login__wrapper registration__wrapper">
+            {mailApprovement}
             <div className="login__container registration__container">
                <div className="login__block registration__block">
                   <div className="login__services">
@@ -75,18 +101,18 @@ export const Registration = (props) => {
                         <div className="login__form__mail registration__form__nickname">
                            <h3 className="login__form__mail__title registration__form__mail__nickname">Никнейм</h3>
                            <input onInvalid={(e) => e.preventDefault()} onChange={(e) => {
-                              props.setUser({ ...props.user, login: e.target.value })
+                              setNewUser({ ...newUser, nickname: e.target.value })
                            }
-                           } type="email" placeholder="Email" className="login__form__mail__input registration__form__mail__input"></input>
-                           {!login && init ? <div className="login__form__login__invalid registration__form__invalid"><span>x</span>Никнейм должен содержать от 3 до 24 латинских символов. Разрешены "_" ".".</div> : ''}
+                           } type="email" placeholder="Nickname" className=" popUp__input login__form__mail__input registration__form__mail__input"></input>
+                           {!login && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Никнейм должен содержать от 3 до 24 латинских символов. Разрешены "_" ".".</div> : ''}
                         </div>
                         <div className="login__form__mail registration__form__mail">
                            <h3 className="login__form__mail__title registration__form__mail__title">Электронная почта</h3>
                            <input onInvalid={(e) => e.preventDefault()} onChange={(e) => {
-                              props.setUser({ ...props.user, login: e.target.value })
+                              setNewUser({ ...newUser, mail: e.target.value })
                            }
-                           } type="email" placeholder="Email" className="login__form__mail__input registration__form__mail__input"></input>
-                           {!login && init ? <div className="login__form__login__invalid registration__form__invalid"><span>x</span>Invalid login. Try again</div> : ''}
+                           } type="email" placeholder="Email" className=" popUp__input login__form__mail__input registration__form__mail__input"></input>
+                           {!mail && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Invalid mail. Try again</div> : ''}
                         </div>
                         <div className="login__form__password registration__form__password">
                            <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
@@ -94,9 +120,19 @@ export const Registration = (props) => {
                            </button>
                            <h3 className="login__form__mail__title registration__form__password__title">Пароль</h3>
                            <input onChange={(e) => {
-                              props.setUser({ ...props.user, password: e.target.value })
-                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className="login__form__password__input registration__form__password__input"></input>
-                           {!password && init ? <div className="login__form__password__invalid registration__form__invalid"><span>x</span>Пароль должен состоять от 6 до 18 символов, используя строчный и заглавные буквы A-z</div> : ''}
+                              setNewUser({ ...newUser, password: e.target.value })
+                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input registration__form__password__input"></input>
+                           {!password && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Пароль должен состоять от 6 до 18 символов, используя строчный и заглавные буквы A-z</div> : ''}
+                        </div>
+                        <div className="login__form__password registration__form__password">
+                           <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
+                              <SVGLoginEyeIcon />
+                           </button>
+                           <h3 className="login__form__mail__title registration__form__password__title">Повтор пароля</h3>
+                           <input onChange={(e) => {
+                              setNewUser({ ...newUser, repeatPassword: e.target.value })
+                           }} type={eye ? 'password' : 'text'} placeholder="Повтор пароля" className=" popUp__input login__form__password__input registration__form__password__input"></input>
+                           {newUser.password !== newUser.repeatPassword && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Пароли не совпадают</div> : ''}
                         </div>
                         <div className="login__form__anotherPC registration__form__anotherPC">
                            <div className=" login__form__anotherPC__checkboxcheckbox registration__form__anotherPC__checkboxcheckbox">
@@ -104,7 +140,7 @@ export const Registration = (props) => {
                               <label htmlFor="c_1" className="checkbox__label"><span className="checkbox__text login__form__anotherPC__title"><span className="login__form__anotherPC__main">Я согласен </span>с правилами пользования и политикой конфиденциальности</span></label>
                            </div>
                         </div>
-                        <Button checkPassword={checkPassword} checkLogin={checkLogin} class={'login__form__enterence-button registration__form__enterance-button'}>Войти</Button>
+                        <Button mailApprovementRef={mailApprovementRef} addNewUser={props.addNewUser} checkPassword={checkPassword} checkLogin={checkLogin} checkMail={checkMail} comparePasswords={comparePasswords} newUser={newUser} setNewUser={setNewUser} class={'registration__form__enterance-button'}>Зарегистрироваться</Button>
                      </form>
                   </div>
                   <div className="login__bottom">

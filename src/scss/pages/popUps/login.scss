@@ -148,6 +148,7 @@
             line-height: 150%;
             background-color: #272937;
             padding: 0 rem(5);
+            color: rgba(255, 255, 255, 0.5);
          }
 
          &__input {
@@ -167,7 +168,6 @@
          width: 100%;
          display: flex;
          flex-direction: column;
-         row-gap: rem(5);
          position: relative;
 
          &__eye {
@@ -237,6 +237,21 @@
          line-height: 150%;
       }
    }
+
+   &__invalid {
+      padding-top: rem(5);
+      display: flex;
+      column-gap: rem(13);
+      align-items: start;
+      color: #f04451;
+      font-size: rem(14);
+      line-height: 150%;
+
+      span {
+         font-size: rem(18);
+      }
+   }
+
 }
 
 .login__cancel {

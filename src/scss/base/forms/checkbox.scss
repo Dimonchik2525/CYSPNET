@@ -72,3 +72,22 @@
 		}
 	}
 }
+
+.registration__form__anotherPC {
+	.checkbox__label {
+		align-items: start;
+	}
+
+	input {
+		&:checked+.checkbox__label:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: rem(10);
+			width: rem(8); // size of the inner box
+			height: rem(8); // size of the inner box
+			background-color: #fff; // color of the inner box
+			transform: translate(-50%, 70%);
+		}
+	}
+}
