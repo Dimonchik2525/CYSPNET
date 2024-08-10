@@ -160,19 +160,23 @@ body {
 
 // Подключение стилей отдельных блоков
 //@import "@scss/pages/footer";
+//!! header & footer
 @import "@scss/pages/header";
 @import "@scss/pages/footer/footer";
+//!! main block
 @import "@scss/pages/main/hero";
 @import "@scss/pages/main/about";
 @import "@scss/pages/main/advantages";
 @import "@scss/pages/main/opportunities";
 @import "@scss/pages/main/choice";
-@import "@scss/pages/error";
 @import "@scss/pages/main/statistics";
 @import "@scss/pages/main/faq";
 @import "@scss/pages/main/cards";
+//!!pop ups 
+@import "@scss/pages/error";
 @import "@scss/pages/popUps/login";
 @import "@scss/pages/popUps/registration";
+@import "@scss/pages/popUps/password";
 
 
 // Подключение стилей отдельных страниц

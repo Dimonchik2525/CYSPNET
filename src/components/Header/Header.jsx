@@ -5,10 +5,12 @@ import { SvgArrowIcon, SvgLogoIcon, SvgQuestionIcon } from "../SvgIcons";
 import Login from "../PopUps/Login";
 import Registration from '../PopUps/Registration'
 import * as React from "react";
+import Password from "../PopUps/Password";
 
 export const Header = (props) => {
    let [loginActive, setLoginActive] = useState(false)
    let [registrationActive, setRegistrationActive] = useState(false)
+   let [passwordActive, setPasswordActive] = useState(false)
    let [user, setUser] = useState({ login: '', password: '' })
 
    let access = <div className="menu__access">
@@ -66,8 +68,9 @@ export const Header = (props) => {
                </div>
             </div>
          </header>
-         <Login usersArray={props.usersArray} user={user} setUser={setUser} loginActive={loginActive} setLoginActive={setLoginActive} />
+         <Login setPasswordActive={setPasswordActive} usersArray={props.usersArray} user={user} setUser={setUser} loginActive={loginActive} setLoginActive={setLoginActive} />
          <Registration addNewUser={props.addNewUser} usersArray={props.usersArray} user={user} setUser={setUser} registrationActive={registrationActive} setRegistrationActive={setRegistrationActive}></Registration>
+         <Password passwordActive={passwordActive} setPasswordActive={setPasswordActive} />
       </React.Fragment>
    );
 }

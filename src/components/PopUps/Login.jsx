@@ -100,7 +100,9 @@ export const Login = (props) => {
                               props.setUser({ ...props.user, password: e.target.value })
                            }} type={eye ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input"></input>
                            {!password && init ? <div className="login__invalid"><span>x</span>Invalid password. Try again</div> : ''}
-                           <button className="login__form__password__forgot">Забыли пароль?</button>
+                           <button onClick={() => {
+                              props.setPasswordActive(true)
+                           }} className="login__form__password__forgot">Забыли пароль?</button>
                         </div>
                         <div className="login__form__anotherPC">
                            <div className=" login__form__anotherPC__checkboxcheckbox">
