@@ -34,11 +34,16 @@
          a {
             display: block;
             padding: rem(15);
+
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
          }
       }
 
       h3 {
-         cursor: pointer;
          padding: rem(10) rem(15);
          opacity: 0.5;
          line-height: 150%;

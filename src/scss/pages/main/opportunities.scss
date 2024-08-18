@@ -133,6 +133,13 @@
          position: absolute;
          top: 50%;
          transform: translateY(-50%);
+         transition: all 0.8s ease 0s;
+
+         @media (any-hover: hover) {
+            &:hover {
+               transform: translateY(-50%) scale(1.3);
+            }
+         }
 
          svg {
             width: rem(11);
@@ -223,6 +230,14 @@
    }
 
    &-mini__title {
+      user-select: none;
+      /* Prevents text selection */
+      -webkit-user-select: none;
+      /* Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
       transition: all 0.8s ease 0s;
       font-weight: 600;
       line-height: 150%;
@@ -246,6 +261,10 @@
    }
 
    &-mini__text {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
       transition: all 0.8s ease 0s;
       max-width: rem(185);
       padding: rem(0) rem(17) rem(15) rem(17);

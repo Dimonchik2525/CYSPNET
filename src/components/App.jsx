@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import Header from "./Header/Header"
 import Main from "./Main/Main"
-import Login from "./PopUps/Login"
 
 export const App = () => {
    let [size, setSize] = useState(document.documentElement.clientWidth)
@@ -25,7 +24,6 @@ export const App = () => {
       user.id = array.length + 1
       setUsersArray([...array, user])
    }
-   console.log(usersArray);
    useEffect(() => {
       function handle() {
          return setSize(document.documentElement.clientWidth)
@@ -36,7 +34,6 @@ export const App = () => {
       };
    }, [])
 
-   //console.log(usersArray);
 
    return (
       <div className="wrapper">

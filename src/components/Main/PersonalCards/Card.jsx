@@ -10,7 +10,7 @@ export const Card = (props) => {
                <img src="img/cards/card__logo__bg.png" alt="" />
                {props.item.logo}
             </li>
-            <li onClick={(e) => e.stopPropagation()} data-tippy-content={props.item.level.description} className="card__item card__level">
+            <li onClick={(e) => e.stopPropagation()} data-tippy-content={props.item.level.description} className={`card__item card__level`}>
                {props.item.level.img}
             </li>
             <li onClick={(e) => e.stopPropagation()} data-tippy-content={props.item.community.description} className="card__item card__community">

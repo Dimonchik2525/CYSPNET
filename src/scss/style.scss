@@ -70,6 +70,40 @@ body {
 
    // Сайт загружен
    .loaded & {}
+
+
+   /* WebKit-specific scrollbar styles */
+   @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      &::-webkit-scrollbar {
+         width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+         background-color: #272937;
+      }
+
+      &::-webkit-scrollbar-thumb {
+         background-color: white;
+         border-radius: rem(50);
+         //border: 2px solid #272937;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+         background-color: #f0f0f0;
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+         background-color: #e0e0e0;
+      }
+   }
+
+   /* Firefox-specific scrollbar styles */
+   @-moz-document url-prefix() {
+      scrollbar-width: thin;
+      /* Makes the scrollbar thinner */
+      scrollbar-color: white #272937;
+      /* Thumb color first, track color second */
+   }
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================

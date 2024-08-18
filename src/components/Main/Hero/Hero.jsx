@@ -20,12 +20,12 @@ export const Hero = (props) => {
                   <article className="hero__content__actions">
                      <Button class={'hero__content__actions__join'}>Присоединиться</Button>
                      <div className="hero__content__actions__about">
-                        <button>О проекте</button>
+                        <button data-goto='#about'>О проекте</button>
                      </div>
                   </article>
                </div>
                <div className="hero__img">
-                  <img src={props.size > 700 ? "img/hero/hero__img.png" : "img/hero/hero__img__2.png"} alt=""></img>
+                  <img src={props.size < 960 && props.size > 700 ? "img/hero/hero__img.png" : "img/hero/hero__img__2.png"} alt=""></img>
                </div>
             </div>
          </div>

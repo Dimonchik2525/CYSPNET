@@ -1,4 +1,11 @@
 //====================================================================================================
+@-moz-document url-prefix() {
+   .menu {
+      scrollbar-width: thin;
+      scrollbar-color: white #272937;
+   }
+}
+
 .header {
    padding-top: rem(51);
    position: fixed;
@@ -46,16 +53,41 @@
          width: 100%;
          height: 100vh;
          top: 0;
-         left: -100%;
+         right: -100%;
          overflow: auto;
          transition: all 0.8s ease 0s;
          padding-bottom: rem(25);
          z-index: 10;
          background: rgba(0, 0, 0, 0.75);
+
+         /* WebKit-specific scrollbar styles */
+         @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+            &::-webkit-scrollbar {
+               width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+               background-color: #272937;
+            }
+
+            &::-webkit-scrollbar-thumb {
+               background-color: white;
+               border-radius: rem(50);
+               //border: 2px solid #272937;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+               background-color: #f0f0f0;
+            }
+
+            &::-webkit-scrollbar-thumb:active {
+               background-color: #e0e0e0;
+            }
+         }
       }
 
       .menu-open & {
-         left: 0;
+         right: 0;
       }
 
       &__body {
@@ -125,6 +157,14 @@
       &__link {
          display: inline-block;
          padding: rem(20);
+         transition: all 0.2s ease 0s;
+
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+               font-weight: 700;
+            }
+         }
       }
 
       &__access {
@@ -135,8 +175,6 @@
          @media (max-width:640px) {
             padding-top: rem(20);
             column-gap: rem(10);
-            //display: block;
-            //padding-left: rem(20);
          }
 
          .menu-open & {}
@@ -146,7 +184,32 @@
          }
 
          &__login {
-            button {
+            position: relative;
+            transition: all 0.5s ease 0s;
+            flex: 1 0 auto;
+
+            &__name {
+               text-align: center;
+            }
+
+            .spollers__item {
+               border: rem(1) solid #fff;
+               border-radius: rem(15);
+               overflow: hidden;
+            }
+
+            .spollers__title {
+               border-radius: none;
+               border: rem(0) solid #000;
+
+               &::before,
+               &::after {
+                  content: '';
+                  display: none;
+               }
+            }
+
+            &__button {
                display: block;
                @include adaptiveValue("width", 123, 80, 640, 320, 1);
                width: rem(123);
@@ -154,6 +217,22 @@
                display: flex;
                align-items: center;
                justify-content: center;
+            }
+
+            .menu__access__login__exit {
+               padding-bottom: rem(7);
+               opacity: 1;
+               text-align: center;
+               width: 100%;
+               font-size: rem(20);
+               font-weight: 800;
+               color: red;
+               background-color: #fff;
+               padding-top: rem(7);
+            }
+
+            .invisible {
+               display: none;
             }
          }
 
@@ -194,6 +273,20 @@
          }
       }
    }
+}
+
+.simplebar-track {
+   background: red;
+}
+
+/* Styling the scrollbar handle */
+.simplebar-scrollbar:before {
+   background-color: #888;
+}
+
+/* Styling the handle on hover */
+.simplebar-scrollbar.simplebar-visible:before {
+   background-color: #555;
 }
 
 //Burger

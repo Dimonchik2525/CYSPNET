@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import Button from "../Common/Button";
-import { SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
+import { SVGLoginEyeClosedIcon, SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
 import * as React from "react";
 
 export const Registration = (props) => {
-   let [eye, setEye] = useState(false)
+   let [eyeMain, setEyeMain] = useState(false)
+   let [eyeSecond, setEyeSecond] = useState(false)
    let [login, setLogin] = useState(false)
    let [password, setPassword] = useState(false)
    let [mail, setMail] = useState(false)
@@ -115,23 +116,23 @@ export const Registration = (props) => {
                            {!mail && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Invalid mail. Try again</div> : ''}
                         </div>
                         <div className="login__form__password registration__form__password">
-                           <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
-                              <SVGLoginEyeIcon />
+                           <button type="button" onClick={() => setEyeMain(!eyeMain)} className="login__form__password__eye">
+                              {!eyeMain ? <SVGLoginEyeIcon /> : <SVGLoginEyeClosedIcon />}
                            </button>
                            <h3 className="login__form__mail__title registration__form__password__title">Пароль</h3>
                            <input onChange={(e) => {
                               setNewUser({ ...newUser, password: e.target.value })
-                           }} type={eye ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input registration__form__password__input"></input>
+                           }} type={eyeMain ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input registration__form__password__input"></input>
                            {!password && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Пароль должен состоять от 6 до 18 символов, используя строчный и заглавные буквы A-z</div> : ''}
                         </div>
                         <div className="login__form__password registration__form__password">
-                           <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
-                              <SVGLoginEyeIcon />
+                           <button type="button" onClick={() => setEyeSecond(!eyeSecond)} className="login__form__password__eye">
+                              {!eyeSecond ? <SVGLoginEyeIcon /> : <SVGLoginEyeClosedIcon />}
                            </button>
                            <h3 className="login__form__mail__title registration__form__password__title">Повтор пароля</h3>
                            <input onChange={(e) => {
                               setNewUser({ ...newUser, repeatPassword: e.target.value })
-                           }} type={eye ? 'password' : 'text'} placeholder="Повтор пароля" className=" popUp__input login__form__password__input registration__form__password__input"></input>
+                           }} type={eyeSecond ? 'password' : 'text'} placeholder="Повтор пароля" className=" popUp__input login__form__password__input registration__form__password__input"></input>
                            {newUser.password !== newUser.repeatPassword && init ? <div className="login__invalid registration__form__invalid"><span>x</span>Пароли не совпадают</div> : ''}
                         </div>
                         <div className="login__form__anotherPC registration__form__anotherPC">
@@ -145,12 +146,17 @@ export const Registration = (props) => {
                   </div>
                   <div className="login__bottom">
                      <h4 className="login__bottom__title">Есть аккаунт?</h4>
-                     <button className="login__bottom__button">Войти</button>
+                     <button onClick={() => {
+                        props.setRegistrationActive(false)
+                        props.setLoginActive(true)
+                     }} className="login__bottom__button">Войти</button>
                   </div>
                </div>
             </div>
             <button onClick={() => {
-               document.documentElement.classList.remove('lock')
+               if (!document.documentElement.classList.contains('menu-open')) {
+                  document.documentElement.classList.remove('lock')
+               }
                props.setRegistrationActive(false)
             }} className="login__cancel  menu__icon"></button>
          </div>

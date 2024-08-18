@@ -7,6 +7,13 @@ export const Button = (props) => {
          if (props.class == 'login__form__enterence-button') {
             props.checkLogin()
             props.checkPassword()
+            if (props.checkLogin() && props.checkPassword()) {
+               props.setLoginActive(false)
+               if (!document.documentElement.classList.contains('menu-open')) {
+                  document.documentElement.classList.remove('lock')
+               }
+               //document.documentElement.classList.contains('lock') ? '' : document.documentElement.classList.contains('lock')
+            }
          }
          if (props.class == 'menu__access__registration') {
             document.documentElement.classList.add('lock')
@@ -24,6 +31,18 @@ export const Button = (props) => {
                })
                props.mailApprovementRef.current.style.opacity = 1;
                setTimeout(() => props.mailApprovementRef.current.style.opacity = 0, 5000)
+            }
+         }
+         if (props.class == 'password__form__cancel-button') {
+            props.setPasswordActive(false)
+            props.setLoginActive(true)
+            props.setCodeSent(false)
+         }
+         if (props.class == 'password__form__enterence-button') {
+            for (let item of props.usersArray) {
+               if (item.mail == props.loginForPass) {
+                  props.setCodeSent(true)
+               }
             }
          }
       }} className={`${props.class} button`}>

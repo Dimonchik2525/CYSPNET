@@ -503,11 +503,13 @@ export let mainArray = [
    }
 ]
 let slides = []
+
 mainArray.map((item, ind) => {
    slides.push(
-      <Card key={ind} item={item} />
+      <Card key={Math.random()} item={item} />
    )
 })
+
 export const PersonalCards = (props) => {
    let [info, setInfo] = useState(false)
    useEffect(() => {
@@ -556,7 +558,7 @@ export const PersonalCards = (props) => {
             slider.destroy();
          }
       };
-   }, []);
+   }, [props.size]);
    return (
       <section id="cards" onClick={() => { info ? setInfo(false) : '' }} className="personalCards">
          <div className={`personalCards__blur ${info ? "blured" : ''}`}>
@@ -564,7 +566,7 @@ export const PersonalCards = (props) => {
          <div className={`personalCards__container ${info ? "blured" : ''}`}>
             <div className="personalCards__block">
                <div className="personalCards__slider swiper">
-                  <div className="personalCards__wrapper swiper-wrapper">
+                  <div className={`personalCards__wrapper swiper-wrapper ${!info ? 'invisible' : 'visible'}`}>
                      {slides}
                   </div>
                   <div className="personalCards__slider__navigation">

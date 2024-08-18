@@ -31,7 +31,13 @@
       position: relative;
       z-index: 3;
       @include adaptiveValue("margin-left", -246, -50, 1350, 960, 0);
+      transition: transform 7s ease 0s;
 
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.2);
+         }
+      }
 
       &__main {
          position: relative;

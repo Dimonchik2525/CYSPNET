@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 import Button from "../Common/Button";
-import { SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
+import { SVGLoginEyeClosedIcon, SVGLoginEyeIcon, SVGLoginGoogleIcon, SVGLoginSteamIcon, SVGSTwichIcon, SVGSTwitterIcon, SVGSVkIcon } from "../SvgIcons";
 import * as React from "react";
+import SimpleBar from "simplebar";
 
 export const Login = (props) => {
    let [eye, setEye] = useState(false)
    let [login, setLogin] = useState(false)
    let [password, setPassword] = useState(false)
    let [init, setInit] = useState(false)
+
+   useEffect(() => {
+      props.setUser({ login: '', password: '' })
+   }, [props.loginActive])
 
    useEffect(() => {
       setInit(false)
@@ -18,22 +23,21 @@ export const Login = (props) => {
    function checkLogin() {
       setInit(true)
       for (let item of props.usersArray) {
-         console.log([item.login, props.user.login]);
          if (item.mail == props.user.login) {
-            console.log('work');
+            props.setLogged(item.nickName)
             setLogin(true)
+            return true
          }
       }
    }
-
    function checkPassword() {
       setInit(true)
       for (let item of props.usersArray) {
          if (item.password == props.user.password) {
             setPassword(true)
+            return true
          }
       }
-
    }
    useEffect(() => {
       let inputArray = document.querySelectorAll('.popUp__input')
@@ -86,7 +90,7 @@ export const Login = (props) => {
                      }} action="" className="login__form">
                         <div className="login__form__mail">
                            <h3 className="login__form__mail__title">Электронная почта</h3>
-                           <input onInvalid={(e) => e.preventDefault()} onChange={(e) => {
+                           <input value={props.user.login} onInvalid={(e) => e.preventDefault()} onChange={(e) => {
                               props.setUser({ ...props.user, login: e.target.value })
                            }
                            } type="email" placeholder="Email" className=" popUp__input login__form__mail__input"></input>
@@ -94,13 +98,14 @@ export const Login = (props) => {
                         </div>
                         <div className="login__form__password">
                            <button type="button" onClick={() => setEye(!eye)} className="login__form__password__eye">
-                              <SVGLoginEyeIcon />
+                              {!eye ? <SVGLoginEyeIcon /> : <SVGLoginEyeClosedIcon />}
                            </button>
-                           <input onChange={(e) => {
+                           <input value={props.user.password} onChange={(e) => {
                               props.setUser({ ...props.user, password: e.target.value })
                            }} type={eye ? 'password' : 'text'} placeholder="Пароль" className=" popUp__input login__form__password__input"></input>
                            {!password && init ? <div className="login__invalid"><span>x</span>Invalid password. Try again</div> : ''}
                            <button onClick={() => {
+                              props.setLoginActive(false)
                               props.setPasswordActive(true)
                            }} className="login__form__password__forgot">Забыли пароль?</button>
                         </div>
@@ -110,17 +115,22 @@ export const Login = (props) => {
                               <label htmlFor="a_1" className="checkbox__label"><span className="checkbox__text login__form__anotherPC__title">Чужой компьютер</span></label>
                            </div>
                         </div>
-                        <Button checkPassword={checkPassword} checkLogin={checkLogin} class={'login__form__enterence-button'}>Войти</Button>
+                        <Button loginActive={props.loginActive} setLoginActive={props.setLoginActive} checkPassword={checkPassword} checkLogin={checkLogin} class={'login__form__enterence-button'}>Войти</Button>
                      </form>
                   </div>
                   <div className="login__bottom">
                      <h4 className="login__bottom__title">Нет аккаунта?</h4>
-                     <button className="login__bottom__button">Создать</button>
+                     <button onClick={() => {
+                        props.setLoginActive(false)
+                        props.setRegistrationActive(true)
+                     }} className="login__bottom__button">Создать</button>
                   </div>
                </div>
             </div>
             <button onClick={() => {
-               document.documentElement.classList.remove('lock')
+               if (!document.documentElement.classList.contains('menu-open')) {
+                  document.documentElement.classList.remove('lock')
+               }
                props.setLoginActive(false)
             }} className="login__cancel  menu__icon"></button>
          </div>

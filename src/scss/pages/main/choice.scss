@@ -14,27 +14,34 @@
       position: absolute;
       top: rem(-45);
       left: 0;
+      animation: spinImg1 20s linear infinite alternate;
+
    }
 
    &__img-2 {
       position: absolute;
       bottom: 0;
       left: 0;
+      animation: spinImg2 20s linear infinite alternate;
    }
 
    &__img-3 {
       position: absolute;
       top: rem(-100);
       right: 0;
+      animation: spinImg3 20s linear infinite alternate;
    }
 
    &__img-4 {
       position: absolute;
       bottom: 0;
       right: 0;
+      animation: spinImg4 20s linear infinite alternate;
    }
 
    &__content {
+      position: relative;
+      z-index: 2;
       @include adaptiveValue("padding-bottom", 110, 35);
       @include adaptiveValue("padding-right", 50, 50, 1350, 640, 0);
       @include adaptiveValue("padding-left", 50, 50, 1350, 640, 0);
@@ -52,6 +59,7 @@
 
       &-main__slider {
          //overflow: visible;
+         padding: rem(0) rem(10);
          margin: 0 auto;
          max-width: rem(850);
          position: relative;
@@ -104,7 +112,7 @@
 
                &::after {
                   content: '';
-                  right: rem(-28.5);
+                  right: rem(-31.25);
                   border-bottom: rem(2) solid #fff;
                   border-left: rem(2) solid #fff;
                   border-radius: 0 0 0 rem(15);
@@ -257,5 +265,113 @@
       width: rem(224);
 
       button {}
+   }
+}
+
+@keyframes spinImg1 {
+   0% {
+      top: rem(-45);
+      left: 0;
+   }
+
+   25% {
+      top: rem(-100);
+      left: rem(40);
+   }
+
+   50% {
+      top: rem(-150);
+      left: rem(80);
+   }
+
+   75% {
+      top: rem(150);
+      left: rem(-50);
+   }
+
+   100% {
+      top: rem(400);
+      left: rem(-150);
+   }
+}
+
+@keyframes spinImg2 {
+   0% {
+      bottom: rem(0);
+      left: 0;
+   }
+
+   25% {
+      bottom: rem(25);
+      left: rem(100);
+   }
+
+   50% {
+      bottom: rem(50);
+      left: rem(20);
+   }
+
+   75% {
+      bottom: rem(100);
+      left: rem(150);
+   }
+
+   100% {
+      bottom: rem(200);
+      left: rem(300);
+   }
+}
+
+@keyframes spinImg3 {
+   0% {
+      top: rem(-100);
+      right: 0;
+   }
+
+   25% {
+      top: rem(100);
+      right: rem(80);
+   }
+
+   50% {
+      top: rem(30);
+      right: rem(-20);
+   }
+
+   75% {
+      top: rem(250);
+      right: rem(50);
+   }
+
+   100% {
+      top: rem(400);
+      right: rem(150);
+   }
+}
+
+@keyframes spinImg4 {
+   0% {
+      bottom: 0;
+      right: 0;
+   }
+
+   25% {
+      bottom: rem(150);
+      right: rem(80);
+   }
+
+   50% {
+      bottom: rem(30);
+      right: rem(20);
+   }
+
+   75% {
+      bottom: rem(200);
+      right: rem(95);
+   }
+
+   100% {
+      bottom: rem(350);
+      right: rem(100);
    }
 }

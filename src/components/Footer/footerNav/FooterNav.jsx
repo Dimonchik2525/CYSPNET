@@ -37,13 +37,13 @@ export const FooterNav = (props) => {
                      <h3 className="footerNav__others__title">Разное</h3>
                      <ul className="footerNav__others__list">
                         <li className="footerNav__others__item">
-                           <a href="" className="footerNav__others__link">Поддержать проект</a>
+                           <a href="#" className="footerNav__others__link">Поддержать проект</a>
                         </li>
                         <li className="footerNav__others__item">
-                           <a href="" className="footerNav__others__link">Благодарности</a>
+                           <a href="#" className="footerNav__others__link">Благодарности</a>
                         </li>
                         <li className="footerNav__others__item">
-                           <a href="" className="footerNav__others__link">Контакты</a>
+                           <a href="#" className="footerNav__others__link">Контакты</a>
                         </li>
                      </ul>
                   </article>
@@ -51,27 +51,27 @@ export const FooterNav = (props) => {
                      <h3 className="footerNav__socials__title">Соц. сети</h3>
                      <ul className="footerNav__socials__list">
                         <li className="footerNav__socials__item">
-                           <a href="" className="footerNav__socials__link">
+                           <a href="#" className="footerNav__socials__link">
                               <SVGSVkIcon />
                            </a>
                         </li>
                         <li className="footerNav__socials__item">
-                           <a href="" className="footerNav__socials__link">
+                           <a href="#" className="footerNav__socials__link">
                               <SVGYoutubeIcon />
                            </a>
                         </li>
                         <li className="footerNav__socials__item">
-                           <a href="" className="footerNav__socials__link">
+                           <a href="#" className="footerNav__socials__link">
                               <SVGSInstaIcon />
                            </a>
                         </li>
                         <li className="footerNav__socials__item">
-                           <a href="" className="footerNav__socials__link">
+                           <a href="#" className="footerNav__socials__link">
                               <SVGSTwitterIcon />
                            </a>
                         </li>
                         <li className="footerNav__socials__item">
-                           <a href="" className="footerNav__socials__link">
+                           <a href="#" className="footerNav__socials__link">
                               <SVGSTwichIcon />
                            </a>
                         </li>
