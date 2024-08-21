@@ -1,6 +1,5 @@
 .footerContacts {
-   background: url('@img/footerContacts/footer__contacts__bg.png')0 0/cover no-repeat;
-   background-color: #00010f;
+   background: #00010f url('@img/footerContacts/footer__contacts__bg.png')0 0/cover no-repeat;
    @include adaptiveValue("padding-top", 211, 191);
    @include adaptiveValue("padding-bottom", 487, 388);
 

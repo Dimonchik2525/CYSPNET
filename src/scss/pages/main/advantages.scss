@@ -1,6 +1,5 @@
 .advantages {
-   background: url('img/advantages/advantages__bg.png') 0 0 /cover no-repeat;
-   background-color: #1d1f2d;
+   background: #1d1f2d url('@img/advantages/advantages__bg.png') 0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 225, 151);
 
    @media (any-hover: hover) {

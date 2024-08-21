@@ -1,6 +1,5 @@
 .footerSupport {
-   background: url('@img/footer__support/footer__support__bg.png')0 0/cover no-repeat;
-   background-color: #00010f;
+   background: #00010f url('@img/footer__support/footer__support__bg.png')0 0/cover no-repeat;
    @include adaptiveValue("padding-top", 211, 161);
    @include adaptiveValue("padding-bottom", 391, 214);
 

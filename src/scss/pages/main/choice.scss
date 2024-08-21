@@ -1,6 +1,5 @@
 .choice {
-   background: url('@img/choice/choice__bg.png') 0 0 /cover no-repeat;
-   background-color: #131523;
+   background: #131523 url('@img/choice/choice__bg.png') 0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 306, 161);
 
    &__container {}

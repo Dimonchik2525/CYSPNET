@@ -1,6 +1,5 @@
 .faq {
-   background: url("@img/faq/faq__bg.png")0 0 /cover no-repeat;
-   background-color: #040614;
+   background: #040614 url("@img/faq/faq__bg.png")0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 184, 161);
 
    &__container {}

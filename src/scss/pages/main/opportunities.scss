@@ -1,6 +1,5 @@
 .opportunities {
-   background-color: #181a28;
-   background: url('@img/oportunities/Opportunities__bg.png') 0 0 /cover no-repeat;
+   background: #181a28 url('@img/oportunities/Opportunities__bg.png') 0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 273, 191);
 
    &__container {}

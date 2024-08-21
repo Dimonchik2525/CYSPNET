@@ -1,6 +1,5 @@
 .personalCards {
-   background: url("@img/cards/personal__card__bg.png")0 0 /cover no-repeat;
-   background-color: #0e101e;
+   background: #0e101e url("@img/cards/personal__card__bg.png")0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 211, 186);
    position: relative;
 

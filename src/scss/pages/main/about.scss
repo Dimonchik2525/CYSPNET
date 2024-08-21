@@ -1,6 +1,5 @@
 .about {
-   background: url('img/about/about__bg.png') 0 0 /cover no-repeat;
-   background-color: #222432;
+   background: #222432 url('@img/about/about__bg.png') 0 0 /cover no-repeat;
    position: relative;
    z-index: 3;
    padding-top: rem(163);

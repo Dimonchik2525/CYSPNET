@@ -1,6 +1,5 @@
 .footerNav {
-   background: url('@img/footerNav/footerNav__bg.png')0 0/cover no-repeat;
-   background-color: #00010f;
+   background: #00010f url('@img/footerNav/footerNav__bg.png')0 0/cover no-repeat;
    @include adaptiveValue("padding-top", 195, 100);
 
    &__container {}

@@ -1,6 +1,5 @@
 .error {
-   background: url('img/error/error__bg.png')0 0 /cover no-repeat;
-   background-color: #272937;
+   background: #272937 url('@img/error/error__bg.png')0 0 /cover no-repeat;
    padding-top: rem(171);
    @include adaptiveValue("padding-top", 171, 128, 1345, 640, 1);
    @include adaptiveValue("padding-top", 128, 161, 640, 320, 1);

@@ -1,6 +1,5 @@
 .statistics {
-   background: url('@img/statistics/statistics__bg.png') 0 0 /cover no-repeat;
-   background-color: #090b19;
+   background: #090b19 url('@img/statistics/statistics__bg.png') 0 0 /cover no-repeat;
    @include adaptiveValue("padding-top", 256, 151);
    overflow: hidden;
 
