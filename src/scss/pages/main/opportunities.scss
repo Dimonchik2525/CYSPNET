@@ -1,7 +1,6 @@
 .opportunities {
    background-color: #181a28;
    background: url('@img/oportunities/Opportunities__bg.png') 0 0 /cover no-repeat;
-   @include adaptiveValue("padding-bottom", 193, 162);
    @include adaptiveValue("padding-top", 273, 191);
 
    &__container {}
@@ -9,6 +8,7 @@
    &__block {
       @include adaptiveValue("padding-right", 70, 0, 1350, 960, 1);
       @include adaptiveValue("padding-left", 70, 0, 1350, 960, 1);
+      @include adaptiveValue("padding-bottom", 193, 162);
    }
 
    &__title {

@@ -8,20 +8,21 @@ import Hero from "./Hero/Hero";
 import Opportunities from "./Opportunities/Opportunities";
 import Statistics from "./Statistics/Statistics";
 import PersonalCards from "./PersonalCards/PersonalCards"
+import * as React from "react";
 
 export const Main = (props) => {
    return (
       <div>
-         {/* <Error size={props.size} /> */}
-         <Hero size={props.size} />
-         <About size={props.size} />
-         <Advantages size={props.size} />
-         <Opportunities size={props.size} />
-         <Choice size={props.size} />
-         <PersonalCards size={props.size} />
-         <Statistics size={props.size} />
-         <Faq size={props.size} />
-         <MainFooter size={props.size} />
+         {props.error ? <Error size={props.size} />
+            : <React.Fragment><Hero size={props.size} />
+               <About size={props.size} />
+               <Advantages size={props.size} />
+               <Opportunities size={props.size} />
+               <Choice size={props.size} />
+               <PersonalCards size={props.size} />
+               <Statistics size={props.size} />
+               <Faq size={props.size} />
+               <MainFooter size={props.size} /> </React.Fragment>}
       </div>
    );
 }

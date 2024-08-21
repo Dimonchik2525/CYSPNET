@@ -14,7 +14,7 @@
          grid-template: auto auto/auto;
       }
 
-      @include adaptiveValue("padding-bottom", 166, 148, 960, 500, 0);
+      @include adaptiveValue("padding-bottom", 166, 148, 2500, 500, 0);
    }
 
    &__content {

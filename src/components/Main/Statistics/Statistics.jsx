@@ -1,6 +1,7 @@
 import * as React from "react"
+import Tooltip from "../../Common/Tooltip"
 
-export const Statistics = () => {
+export const Statistics = (props) => {
    let mainArray = [
       {
          number: '112',
@@ -32,7 +33,7 @@ export const Statistics = () => {
    })
 
    return (
-      <div id="statistics" className="statistics">
+      <section id="statistics" className="statistics">
          <div className="statistics__container">
             <div className="statistics__block">
                <div className="statistics__content">
@@ -57,7 +58,8 @@ export const Statistics = () => {
                </div>
             </div>
          </div>
-      </div>
+         {props.size > 960 ? <Tooltip /> : ''}
+      </section>
    );
 }
 

@@ -3,8 +3,9 @@ import OpportunitiesSlider from "./OpportunitiesSlider";
 import { Navigation, Pagination } from "swiper/modules";
 import Swiper from 'swiper'
 import { SVGRubIcon, SVGSettingsIcon, SvgArena1tIcon, SvgArena2tIcon, SvgArena3tIcon, SvgArena5tIcon, SvgArena6tIcon, SvgArenatIcon, SvgClub1tIcon, SvgClub2tIcon, SvgClub3tIcon, SvgClub4tIcon, SvgClubIcon, SvgOrganization2tIcon, SvgOrganization3tIcon, SvgOrganizationIcon, SvgUser2tIcon, SvgUser3tIcon, SvgUser4tIcon, SvgUser5tIcon, SvgUser6tIcon, SvgUserIcon } from "../../SvgIcons";
+import Tooltip from "../../Common/Tooltip";
 
-export const Opportunities = () => {
+export const Opportunities = (props) => {
    let mainArray = [
       {
          img: <SvgUserIcon />,
@@ -208,7 +209,7 @@ export const Opportunities = () => {
       };
    }, []);
    return (
-      <div id="opportunities" className="opportunities">
+      <section id="opportunities" className="opportunities">
          <div className="opportunities__container">
             <div className="opportunities__block">
                <div className="opportunities__title">Предоставляем массу возможностей</div>
@@ -238,8 +239,8 @@ export const Opportunities = () => {
                </div>
             </div>
          </div>
-
-      </div>
+         {props.size > 960 ? <Tooltip /> : ''}
+      </section>
    );
 }
 

@@ -265,6 +265,10 @@
 
       &__policy {
          line-height: 150%;
+
+         @media (max-width: 600px) {
+            text-align: center;
+         }
       }
    }
 }

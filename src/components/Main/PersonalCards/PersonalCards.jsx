@@ -4,6 +4,7 @@ import Card from './Card'
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 import * as React from "react";
+import Tooltip from "../../Common/Tooltip";
 export let mainArray = [
    {
       logo: <SvgLogoIcon />,
@@ -603,6 +604,7 @@ export const PersonalCards = (props) => {
             </div>
             : ''
          }
+         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

@@ -18,6 +18,7 @@ export const App = () => {
          id: 2
       }
    ])
+   let [error, setError] = useState(false)
 
    function addNewUser(user) {
       let array = usersArray.slice(0)
@@ -38,7 +39,7 @@ export const App = () => {
    return (
       <div className="wrapper">
          <Header addNewUser={addNewUser} usersArray={usersArray} size={size} />
-         <Main size={size} />
+         <Main error={error} setError={setError} size={size} />
       </div>
    )
 }

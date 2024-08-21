@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SvgLightIcon, SvgMicroIcon, SvgMoneyIcon, SvgRewardIcon } from "../../SvgIcons";
+import Tooltip from "../../Common/Tooltip";
 
 export const Advantages = (props) => {
    let [active, setActive] = useState(true)
@@ -80,6 +81,7 @@ export const Advantages = (props) => {
                </div>
             </div>
          </div>
+         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

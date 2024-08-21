@@ -4,6 +4,7 @@ import { SVGAnaliticIcon, SVGCoachIcon, SVGComentatorIcon, SVGJudgeIcon, SVGMana
 import Swiper from "swiper";
 import { Navigation, Pagination, Controller } from "swiper/modules";
 import * as React from "react";
+import Tooltip from "../../Common/Tooltip";
 
 export const Choice = (props) => {
    //let [activeItem, setActiveItem] = useState(null)
@@ -189,7 +190,7 @@ export const Choice = (props) => {
    }, [props.size]);
 
    return (
-      <div id="choice" className="choice">
+      <section id="choice" className="choice">
          <div className="choice__container">
             <div className="choice__block">
                <div className="choice__content">
@@ -227,7 +228,8 @@ export const Choice = (props) => {
                   </React.Fragment> : ''}
             </div>
          </div>
-      </div>
+         {props.size > 960 ? <Tooltip /> : ''}
+      </section>
    );
 }
 

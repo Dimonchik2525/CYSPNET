@@ -200,9 +200,10 @@
 //!! TOOLTIP===============================================================
 
 .tooltip {
+   position: relative;
    opacity: 0.5;
    display: flex;
-   padding: rem(30) 0;
+   padding: rem(0) 0 rem(30) 0;
    align-items: center;
 
    &__scroll {
@@ -232,6 +233,9 @@
    }
 
    &__beta__wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
       display: flex;
       justify-content: center;
       width: rem(202);

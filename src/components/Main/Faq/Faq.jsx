@@ -1,6 +1,8 @@
-export const Faq = () => {
+import Tooltip from "../../Common/Tooltip";
+
+export const Faq = (props) => {
    return (
-      <div id="faq" className="faq">
+      <section id="faq" className="faq">
          <div className="faq__container">
             <div className="faq__block">
                <h2 className="faq__title">FAQ</h2>
@@ -20,7 +22,8 @@ export const Faq = () => {
                </div>
             </div>
          </div>
-      </div>
+         {props.size > 960 ? <Tooltip /> : ''}
+      </section>
    );
 }
 

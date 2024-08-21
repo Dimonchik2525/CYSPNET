@@ -6,7 +6,7 @@
    &__container {}
 
    &__block {
-      @include adaptiveValue("padding-bottom", 102, 42);
+      @include adaptiveValue("padding-bottom", 46, 102);
       position: relative;
    }
 
