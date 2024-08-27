@@ -200,7 +200,11 @@
 //!! TOOLTIP===============================================================
 
 .tooltip {
-   position: relative;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 5;
+   width: 100%;
    opacity: 0.5;
    display: flex;
    padding: rem(0) 0 rem(30) 0;

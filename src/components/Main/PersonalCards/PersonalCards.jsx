@@ -604,7 +604,6 @@ export const PersonalCards = (props) => {
             </div>
             : ''
          }
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

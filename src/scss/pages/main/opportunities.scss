@@ -7,7 +7,7 @@
    &__block {
       @include adaptiveValue("padding-right", 70, 0, 1350, 960, 1);
       @include adaptiveValue("padding-left", 70, 0, 1350, 960, 1);
-      @include adaptiveValue("padding-bottom", 193, 162);
+      @include adaptiveValue("padding-bottom", 273, 162);
    }
 
    &__title {

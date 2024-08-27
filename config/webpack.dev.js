@@ -65,6 +65,17 @@ const config = {
             ]
          },
          {
+            test: /\.(png|jpe?g|gif|svg)$/i,
+            use: [
+               {
+                  loader: 'file-loader',
+                  options: {
+                     name: '[path][name].[ext]',
+                  },
+               },
+            ],
+         },
+         {
             test: /\.(?:js|mjs|cjs|jsx)$/,
             exclude: /node_modules/,
             use: {

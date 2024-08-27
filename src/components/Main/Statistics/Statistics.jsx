@@ -58,7 +58,6 @@ export const Statistics = (props) => {
                </div>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

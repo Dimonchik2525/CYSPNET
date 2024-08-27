@@ -46,7 +46,7 @@
 
    &__block {
       position: relative;
-      @include adaptiveValue("padding-bottom", 123, 63);
+      @include adaptiveValue("padding-bottom", 203, 63);
    }
 
    &__slider {

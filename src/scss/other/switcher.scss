@@ -1,0 +1,87 @@
+.switcher {
+   opacity: 0.2;
+   transition: all 0.5s ease 0s;
+   position: fixed;
+   @include adaptiveValue("left", 100, 0, 1920, 1500, 1);
+   //left: 0;
+   top: rem(120);
+   display: flex;
+   flex-direction: column;
+   row-gap: rem(5);
+   align-items: center;
+   z-index: 4;
+
+   &__title {
+      color: rgb(255, 255, 255);
+      font-size: rem(18);
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         opacity: 1;
+      }
+   }
+
+   input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+   }
+}
+
+.switch {
+   position: relative;
+   width: rem(50);
+   height: rem(20);
+
+   &__mode {
+      position: absolute;
+      z-index: 2;
+      top: rem(3);
+      padding-left: rem(3);
+      font-weight: 600;
+      font-size: rem(14);
+
+      &.red {
+         right: rem(8);
+      }
+
+      &.green {
+         left: rem(8);
+      }
+   }
+
+}
+
+.switch__label {
+   position: absolute;
+   z-index: 1;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: red;
+   transition: 0.4s;
+   border-radius: 34px;
+}
+
+.switch__label:before {
+   position: absolute;
+   content: "";
+   height: rem(13);
+   width: rem(13);
+   left: rem(5);
+   bottom: rem(3);
+   background-color: white;
+   transition: 0.4s;
+   border-radius: 50%;
+}
+
+input:checked+.switch__label {
+   background-color: green;
+}
+
+input:checked+.switch__label:before {
+   transform: translateX(27px);
+}

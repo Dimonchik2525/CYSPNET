@@ -228,7 +228,6 @@ export const Choice = (props) => {
                   </React.Fragment> : ''}
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

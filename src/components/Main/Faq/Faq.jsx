@@ -1,6 +1,7 @@
-import Tooltip from "../../Common/Tooltip";
+
 
 export const Faq = (props) => {
+
    return (
       <section id="faq" className="faq">
          <div className="faq__container">
@@ -22,7 +23,6 @@ export const Faq = (props) => {
                </div>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

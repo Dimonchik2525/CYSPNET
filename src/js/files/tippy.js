@@ -17,10 +17,13 @@ import { mainArray } from "../../components/Main/PersonalCards/PersonalCards.jsx
 flsModules.tippy = tippy('#d', {
    content: 'Во время открытого бета-тестирования будет доступна часть функций'
 });
-
-for (let item of Object.values(mainArray[0])) {
-   flsModules.tippy = tippy(`[data-tippy-content]`, {
-      theme: 'custom'
-   })
+export function addTippy() {
+   for (let item of Object.values(mainArray[0])) {
+      flsModules.tippy = tippy(`[data-tippy-content]`, {
+         theme: 'custom'
+      })
+   }
 }
+addTippy()
+
 

@@ -5,7 +5,7 @@
    &__container {}
 
    &__block {
-      @include adaptiveValue("padding-bottom", 280, 125);
+      @include adaptiveValue("padding-bottom", 360, 125);
    }
 
    &__title {

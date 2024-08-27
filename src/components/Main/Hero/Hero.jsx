@@ -29,7 +29,6 @@ export const Hero = (props) => {
                </div>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

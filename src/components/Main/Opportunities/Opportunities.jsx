@@ -142,6 +142,7 @@ export const Opportunities = (props) => {
 
       function initSwiper() {
          slider = new Swiper('.opportunities__slider', {
+            direction: 'horizontal',
             modules: [Navigation],
             observer: true,
             observeParents: true,
@@ -239,7 +240,6 @@ export const Opportunities = (props) => {
                </div>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }

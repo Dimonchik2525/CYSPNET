@@ -40,7 +40,7 @@
    &__content {
       display: grid;
       grid-template: auto auto/repeat(4, 1fr);
-      @include adaptiveValue("padding-bottom", 129, 23);
+      @include adaptiveValue("padding-bottom", 223, 23);
       row-gap: rem(39);
       column-gap: rem(15);
 

@@ -17,7 +17,6 @@ export const About = (props) => {
                </article>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    )
 }

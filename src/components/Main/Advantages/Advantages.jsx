@@ -81,7 +81,6 @@ export const Advantages = (props) => {
                </div>
             </div>
          </div>
-         {props.size > 960 ? <Tooltip /> : ''}
       </section>
    );
 }
